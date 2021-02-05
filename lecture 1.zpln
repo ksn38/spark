@@ -1,0 +1,2777 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%md\n## Welcome to Zeppelin.\n##### This is a live tutorial, you can run the code yourself. (Shift-Enter to Run)",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:26:17+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Welcome to Zeppelin.</h2>\n<h5>This is a live tutorial, you can run the code yourself. (Shift-Enter to Run)</h5>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_1418035326",
+      "id": "20201119-083026_765367917",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "dateStarted": "2021-01-27T18:26:17+0000",
+      "dateFinished": "2021-01-27T18:26:17+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:59325"
+    },
+    {
+      "text": "%md\n\n### Заголовок",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:27:33+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Заголовок</h3>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611772000839_1116616896",
+      "id": "paragraph_1611772000839_1116616896",
+      "dateCreated": "2021-01-27T18:26:40+0000",
+      "dateStarted": "2021-01-27T18:27:33+0000",
+      "dateFinished": "2021-01-27T18:27:33+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59326"
+    },
+    {
+      "text": "%sh\n\ndu -d 2\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:50:37+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sh",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "8\t./.oracle_jre_usage\n52612\t./.local/lib\n52616\t./.local\n42300\t./.cache/pip\n42304\t./.cache\n97608\t.\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611772156967_1527185562",
+      "id": "paragraph_1611772156967_1527185562",
+      "dateCreated": "2021-01-27T18:29:16+0000",
+      "dateStarted": "2021-01-27T18:50:37+0000",
+      "dateFinished": "2021-01-27T18:50:39+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59327"
+    },
+    {
+      "text": "%sh\n\nhdfs dfs -du -s -h /apps/spark/warehouse/* ",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:50:40+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sh",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "0        0        /apps/spark/warehouse/afonin_en.db\n2.6 G    7.9 G    /apps/spark/warehouse/bd_228_aafonin.db\n7.7 M    23.2 M   /apps/spark/warehouse/bd_228_akurov.db\n8.3 M    25.0 M   /apps/spark/warehouse/bd_228_ddoni.db\n8.0 M    23.9 M   /apps/spark/warehouse/bd_274_mmingalov.db\n16.0 M   39.9 M   /apps/spark/warehouse/bd_274_rozhkov.db\n1.2 M    3.6 M    /apps/spark/warehouse/df\n424.7 M  1.2 G    /apps/spark/warehouse/fc.db\n8.0 M    23.9 M   /apps/spark/warehouse/fire_calls\n2.7 M    8.1 M    /apps/spark/warehouse/fire_calls_2018\n0        0        /apps/spark/warehouse/gu_bigdata_393.db\n17.3 M   51.8 M   /apps/spark/warehouse/habr.db\n64.0 K   127.9 K  /apps/spark/warehouse/homework.db\n7.6 G    15.3 G   /apps/spark/warehouse/hw2.db\n112.5 M  299.1 M  /apps/spark/warehouse/kotelnikov.db\n172.8 K  345.5 K  /apps/spark/warehouse/mnm\n0        0        /apps/spark/warehouse/oberezovskaya.db\n3.6 M    10.8 M   /apps/spark/warehouse/orderstbl\n6.2 M    18.6 M   /apps/spark/warehouse/sint_sales.db\n14.7 M   44.2 M   /apps/spark/warehouse/spark_streaming_course\n8.0 M    23.9 M   /apps/spark/warehouse/tbl\n371      1.1 K    /apps/spark/warehouse/test\n2        6        /apps/spark/warehouse/to_drop\n3.1 M    9.4 M    /apps/spark/warehouse/userstbl\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611299636921_114442546",
+      "id": "paragraph_1611299636921_114442546",
+      "dateCreated": "2021-01-22T07:13:56+0000",
+      "dateStarted": "2021-01-27T18:50:40+0000",
+      "dateFinished": "2021-01-27T18:50:43+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59328"
+    },
+    {
+      "text": "%pyspark\n\nsc.applicationId",
+      "user": "anonymous",
+      "dateUpdated": "2021-02-01T17:40:56+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "u'application_1611766633932_0138'\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611772265600_1251347571",
+      "id": "paragraph_1611772265600_1251347571",
+      "dateCreated": "2021-01-27T18:31:05+0000",
+      "dateStarted": "2021-02-01T17:40:56+0000",
+      "dateFinished": "2021-02-01T17:42:04+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59329"
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-02-01T17:29:59+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1612200599071_480142707",
+      "id": "paragraph_1612200599071_480142707",
+      "dateCreated": "2021-02-01T17:29:59+0000",
+      "status": "READY",
+      "$$hashKey": "object:59330"
+    },
+    {
+      "text": "spark.sql(\"show databases\").show",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-29T09:50:57+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------------+\n|    databaseName|\n+----------------+\n|       afonin_en|\n|  bd_228_aafonin|\n|   bd_228_akurov|\n|    bd_228_ddoni|\n|bd_274_mmingalov|\n|  bd_274_rozhkov|\n|         default|\n|              fc|\n|  gu_bigdata_393|\n|            habr|\n|        homework|\n|             hw2|\n|      kotelnikov|\n|   oberezovskaya|\n|      sint_sales|\n+----------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611308141323_808473163",
+      "id": "paragraph_1611308141323_808473163",
+      "dateCreated": "2021-01-22T09:35:41+0000",
+      "dateStarted": "2021-01-29T09:50:57+0000",
+      "dateFinished": "2021-01-29T09:50:58+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59331"
+    },
+    {
+      "text": "sc.stop\nspark.stop",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-28T10:30:29+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611488752750_1110882837",
+      "id": "paragraph_1611488752750_1110882837",
+      "dateCreated": "2021-01-24T11:45:52+0000",
+      "dateStarted": "2021-01-28T10:30:29+0000",
+      "dateFinished": "2021-01-28T10:30:29+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59332"
+    },
+    {
+      "text": "%pyspark\n\nspark.sparkContext.applicationId",
+      "user": "anonymous",
+      "dateUpdated": "2021-02-04T12:39:58+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "u'application_1612436576819_0002'\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_970941981",
+      "id": "20210111-182256_119124479",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "dateStarted": "2021-02-04T12:39:58+0000",
+      "dateFinished": "2021-02-04T12:40:25+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59333"
+    },
+    {
+      "text": "%pyspark\n\nz.show(\n    spark.sql(\"show databases\")\n)\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:36:39+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {
+                    "columns": [
+                      {
+                        "name": "databaseName",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      }
+                    ],
+                    "scrollFocus": {},
+                    "selection": [],
+                    "grouping": {
+                      "grouping": [],
+                      "aggregations": [],
+                      "rowExpandedStates": {}
+                    },
+                    "treeView": {},
+                    "pagination": {
+                      "paginationCurrentPage": 1,
+                      "paginationPageSize": 250
+                    }
+                  },
+                  "tableColumnTypeState": {
+                    "names": {
+                      "databaseName": "number"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "databaseName",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": []
+            },
+            "helium": {}
+          },
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {
+                    "columns": [
+                      {
+                        "name": "databaseName0",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {
+                          "priority": 0,
+                          "direction": "asc"
+                        },
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      }
+                    ],
+                    "scrollFocus": {},
+                    "selection": [],
+                    "grouping": {
+                      "grouping": [],
+                      "aggregations": [],
+                      "rowExpandedStates": {}
+                    },
+                    "treeView": {},
+                    "pagination": {
+                      "paginationCurrentPage": 1,
+                      "paginationPageSize": 250
+                    }
+                  },
+                  "tableColumnTypeState": {
+                    "names": {
+                      "databaseName": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "databaseName",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": []
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Hive Session ID = d7ce4bef-0283-4db4-8272-61eb161a399e\n\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "databaseName\nafonin_en\nbd_228_aafonin\nbd_228_akurov\nbd_228_ddoni\nbd_274_mmingalov\nbd_274_rozhkov\ndefault\nfc\nhabr\nhomework\nhw2\nkotelnikov\noberezovskaya\nsint_sales\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_1624429188",
+      "id": "20201218-164721_486785588",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "dateStarted": "2021-01-27T14:27:05+0000",
+      "dateFinished": "2021-01-27T14:27:58+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59334"
+    },
+    {
+      "title": "Spark configuration parameters",
+      "text": "%pyspark\n\nprint(\"Application ID: \" + sc.applicationId + \"\\n\")\n\nprint(\"Spark configuration: \\n\")\n\nfor pair in spark.sparkContext.getConf().getAll():\n    print(pair[0] + \" \\t= \" + pair[1]) ",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:37:54+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Application ID: application_1611766633932_0007\n\nSpark configuration: \n\nspark.history.kerberos.keytab \t= none\nspark.eventLog.enabled \t= true\nspark.driver.host \t= bigdataanalytics-head-0.novalocal\nspark.driver.port \t= 41872\nzeppelin.pyspark.useIPython \t= true\nspark.history.ui.port \t= 18081\nspark.driver.extraLibraryPath \t= /usr/hdp/current/hadoop-client/lib/native:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64\nspark.driver.appUIAddress \t= http://bigdataanalytics-head-0.novalocal:4042\nzeppelin.spark.concurrentSQL \t= true\nspark.history.fs.cleaner.interval \t= 7d\nspark.driver.memory \t= 1g\nspark.shuffle.io.serverThreads \t= 128\nspark.executor.extraLibraryPath \t= /usr/hdp/current/hadoop-client/lib/native:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64\nspark.app.id \t= application_1611766633932_0007\nSPARK_HOME \t= /usr/hdp/current/spark2-client/\nspark.executorEnv.PYTHONPATH \t= /usr/hdp/current/spark2-client//python/lib/py4j-0.10.7-src.zip:/usr/hdp/current/spark2-client//python/:<CPS>{{PWD}}/pyspark.zip<CPS>{{PWD}}/py4j-0.10.7-src.zip\nspark.webui.yarn.useProxy \t= false\nspark.shuffle.file.buffer \t= 1m\nspark.executor.memory \t= 1g\nspark.useHiveContext \t= true\nspark.sql.hive.convertMetastoreOrc \t= true\nzeppelin.kotlin.shortenTypes \t= true\nspark.sql.autoBroadcastJoinThreshold \t= 26214400\nspark.ui.filters \t= org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter\nspark.eventLog.dir \t= hdfs:///spark2-history/\nspark.yarn.historyServer.address \t= bigdataanalytics-head-0.novalocal:18081\nspark.ui.proxyBase \t= /proxy/application_1611766633932_0007\nzeppelin.spark.printREPLOutput \t= true\nzeppelin.spark.enableSupportedVersionCheck \t= true\nspark.driver.extraJavaOptions \t=  -Dfile.encoding=UTF-8 -Dlog4j.configuration=file:///opt/zeppelin/zeppelin-0.9.0-bin-all/conf/log4j.properties -Dlog4j.configurationFile=file:///opt/zeppelin/zeppelin-0.9.0-bin-all/conf/log4j2.properties -Dzeppelin.log.file=/opt/zeppelin/zeppelin-0.9.0-bin-all/logs/zeppelin-interpreter-spark-2FVHCT33E-zeppelin-bigdataanalytics-head-0.novalocal.log\nzeppelin.spark.maxResult \t= 1000\nspark.executor.id \t= driver\nzeppelin.interpreter.connection.poolsize \t= 10\nspark.sql.orc.impl \t= native\nspark.yarn.dist.archives \t= file:/usr/hdp/current/spark2-client/R/lib/sparkr.zip#sparkr\nzeppelin.R.image.width \t= 100%\nzeppelin.spark.ui.hidden \t= false\nspark.history.fs.logDirectory \t= hdfs:///spark2-history/\nspark.app.name \t= zeppelin-9996\nzeppelin.spark.deprecatedMsg.show \t= true\nspark.sql.catalogImplementation \t= hive\nspark.history.fs.cleaner.maxAge \t= 90d\nzeppelin.interpreter.lifecyclemanager.timeout.threshold \t= 15000\nzeppelin.spark.sql.interpolation \t= false\nspark.sql.warehouse.dir \t= /apps/spark/warehouse\nspark.history.store.path \t= /var/lib/spark2/shs_db\nspark.repl.class.uri \t= spark://bigdataanalytics-head-0.novalocal:41872/classes\nzeppelin.R.cmd \t= R\nspark.jars \t= file:/opt/zeppelin/zeppelin-0.9.0-bin-all/interpreter/spark/spark-interpreter-0.9.0.jar\nzeppelin.interpreter.output.limit \t= 102400\nPYSPARK_PYTHON \t= python\nspark.sql.statistics.fallBackToHdfs \t= true\nspark.executor.instances \t= 2\nPYSPARK_DRIVER_PYTHON \t= python\nspark.history.provider \t= org.apache.spark.deploy.history.FsHistoryProvider\nspark.submit.deployMode \t= client\nzeppelin.R.knitr \t= true\nspark.org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter.param.PROXY_HOSTS \t= bigdataanalytics-head-0.novalocal\nspark.repl.class.outputDir \t= /tmp/spark3854696921363331462\nspark.org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter.param.PROXY_URI_BASES \t= http://bigdataanalytics-head-0.novalocal:8088/proxy/application_1611766633932_0007\nspark.driver.cores \t= 1\nzeppelin.spark.useHiveContext \t= true\nspark.sql.hive.metastore.jars \t= /usr/hdp/current/spark2-client/standalone-metastore/*\nspark.scheduler.mode \t= FAIR\nspark.yarn.queue \t= default\nzeppelin.R.render.options \t= out.format = 'html', comment = NA, echo = FALSE, results = 'asis', message = F, warning = F, fig.retina = 2\nspark.history.fs.cleaner.enabled \t= true\nspark.driver.extraClassPath \t= :/opt/zeppelin/zeppelin-0.9.0-bin-all/interpreter/spark/*:::/opt/zeppelin/zeppelin-0.9.0-bin-all/interpreter/zeppelin-interpreter-shaded-0.9.0.jar:/opt/zeppelin/zeppelin-0.9.0-bin-all/interpreter/spark/spark-interpreter-0.9.0.jar:/etc/hadoop/conf\nzeppelin.interpreter.localRepo \t= /opt/zeppelin/zeppelin-0.9.0-bin-all/local-repo/spark\nspark.master \t= yarn\nspark.io.compression.lz4.blockSize \t= 128kb\nspark.history.kerberos.principal \t= none\nspark.sql.orc.filterPushdown \t= true\nspark.shuffle.io.backLog \t= 8192\nspark.unsafe.sorter.spill.reader.buffer.size \t= 1m\nzeppelin.spark.concurrentSQL.max \t= 10\nspark.shuffle.unsafe.file.output.buffer \t= 5m\nspark.yarn.isPython \t= true\nspark.executor.cores \t= 1\nzeppelin.spark.sql.stacktrace \t= true\nzeppelin.spark.scala.color \t= true\nspark.executor.extraJavaOptions \t= -XX:+UseNUMA\nspark.sql.hive.metastore.version \t= 3.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_1959244944",
+      "id": "20201119-090924_1760414506",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "dateStarted": "2021-01-27T18:37:54+0000",
+      "dateFinished": "2021-01-27T18:37:54+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59335"
+    },
+    {
+      "title": "Create DataFrame from array",
+      "text": "%pyspark \n\ndept = [(\"Finance\", 10), \n        (\"Marketing\", 20), \n        (\"Sales\", 30), \n        (\"IT\", 40) \n      ]\n\ndeptColumns = [\"dept_name\",\"dept_id\"]\n\ndeptDF = spark.createDataFrame(data=dept, schema = deptColumns)\n\ndeptDF.printSchema()\n\ndeptDF.show(truncate=False)",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:39:48+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- dept_name: string (nullable = true)\n |-- dept_id: long (nullable = true)\n\n+---------+-------+\n|dept_name|dept_id|\n+---------+-------+\n|Finance  |10     |\n|Marketing|20     |\n|Sales    |30     |\n|IT       |40     |\n+---------+-------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://bigdataanalytics-head-0.novalocal:4042/jobs/job?id=0",
+              "$$hashKey": "object:61713"
+            },
+            {
+              "jobUrl": "http://bigdataanalytics-head-0.novalocal:4042/jobs/job?id=1",
+              "$$hashKey": "object:61714"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_783442120",
+      "id": "20201119-090924_666128713",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "dateStarted": "2021-01-27T18:39:10+0000",
+      "dateFinished": "2021-01-27T18:39:20+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59336"
+    },
+    {
+      "text": "%pyspark\n\nz.show(deptDF)",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:41:32+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {
+                    "columns": [
+                      {
+                        "name": "dept_name",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {
+                          "priority": 0,
+                          "direction": "asc"
+                        },
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "dept_id",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      }
+                    ],
+                    "scrollFocus": {},
+                    "selection": [],
+                    "grouping": {
+                      "grouping": [],
+                      "aggregations": [],
+                      "rowExpandedStates": {}
+                    },
+                    "treeView": {},
+                    "pagination": {
+                      "paginationCurrentPage": 1,
+                      "paginationPageSize": 250
+                    }
+                  },
+                  "tableColumnTypeState": {
+                    "names": {
+                      "dept_name": "string",
+                      "dept_id": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "dept_name",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "dept_id",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "dept_name\tdept_id\nFinance\t10\nMarketing\t20\nSales\t30\nIT\t40\n"
+          },
+          {
+            "type": "TEXT",
+            "data": "\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_393372722",
+      "id": "20210111-183034_250552806",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59337"
+    },
+    {
+      "text": "%pyspark\n\nnmn_dataset_path = \"/user/admin/mnm_dataset.csv\"",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:52:58+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_1334552926",
+      "id": "20201119-083056_1408855290",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "dateStarted": "2021-01-27T18:52:58+0000",
+      "dateFinished": "2021-01-27T18:52:58+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59338"
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-02-03T17:18:21+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1612372701833_2016355255",
+      "id": "paragraph_1612372701833_2016355255",
+      "dateCreated": "2021-02-03T17:18:21+0000",
+      "status": "READY",
+      "$$hashKey": "object:59339"
+    },
+    {
+      "title": ".csv to DataFrame",
+      "text": "%pyspark\n\nbank_schema = \"State STRING, Color STRING, Count INTEGER\"\n\ndf = spark.read \\\n    .option(\"header\", True) \\\n    .schema(bank_schema)\\\n    .csv(nmn_dataset_path)\n\nprint(df.count())\n\ndf.printSchema()",
+      "user": "anonymous",
+      "dateUpdated": "2021-02-03T17:21:23+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Fail to execute line 8:     .csv(nmn_dataset_path)\nTraceback (most recent call last):\n  File \"/tmp/1612372967448-0/zeppelin_python.py\", line 153, in <module>\n    exec(code, _zcUserQueryNameSpace)\n  File \"<stdin>\", line 8, in <module>\nNameError: name 'nmn_dataset_path' is not defined\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_366945825",
+      "id": "20201119-090924_1728313471",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "dateStarted": "2021-02-03T17:21:23+0000",
+      "dateFinished": "2021-02-03T17:22:54+0000",
+      "status": "ERROR",
+      "$$hashKey": "object:59340"
+    },
+    {
+      "title": "Save to table",
+      "text": "%pyspark\n\ndf.write.mode(\"overwrite\")\\\n    .saveAsTable(\"default.mnm\")\n\n\nspark.table(\"default.mnm\").printSchema()\n\nspark.table(\"default.mnm\").rdd.getNumPartitions()",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:44:52+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- State: string (nullable = true)\n |-- Color: string (nullable = true)\n |-- Count: integer (nullable = true)\n\n1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://bigdataanalytics-head-0.novalocal:4042/jobs/job?id=3",
+              "$$hashKey": "object:62014"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_1750738421",
+      "id": "20201119-091130_1783946172",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "dateStarted": "2021-01-27T18:44:52+0000",
+      "dateFinished": "2021-01-27T18:45:12+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59341"
+    },
+    {
+      "text": "%pyspark\nspark.table(\"default.mnm\") \\\n.show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:45:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----+------+-----+\n|State| Color|Count|\n+-----+------+-----+\n|   TX|   Red|   20|\n|   NV|  Blue|   66|\n|   CO|  Blue|   79|\n|   OR|  Blue|   71|\n|   WA|Yellow|   93|\n|   WY|  Blue|   16|\n|   CA|Yellow|   53|\n|   WA| Green|   60|\n|   OR| Green|   71|\n|   TX| Green|   68|\n|   NV| Green|   59|\n|   AZ| Brown|   95|\n|   WA|Yellow|   20|\n|   AZ|  Blue|   75|\n|   OR| Brown|   72|\n|   NV|   Red|   98|\n|   WY|Orange|   45|\n|   CO|  Blue|   52|\n|   TX| Brown|   94|\n|   CO|   Red|   82|\n+-----+------+-----+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://bigdataanalytics-head-0.novalocal:4042/jobs/job?id=4",
+              "$$hashKey": "object:62072"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611773100734_286448671",
+      "id": "paragraph_1611773100734_286448671",
+      "dateCreated": "2021-01-27T18:45:00+0000",
+      "dateStarted": "2021-01-27T18:45:06+0000",
+      "dateFinished": "2021-01-27T18:45:14+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59342"
+    },
+    {
+      "text": "%pyspark\nspark.sql(\"show tables in default\").show()\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:47:35+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------+---------------+-----------+\n|database|      tableName|isTemporary|\n+--------+---------------+-----------+\n| default|             df|      false|\n| default|     fire_calls|      false|\n| default|fire_calls_2018|      false|\n| default|            mnm|      false|\n| default|      orderstbl|      false|\n| default|            tbl|      false|\n| default|           test|      false|\n| default|        to_drop|      false|\n| default|       userstbl|      false|\n+--------+---------------+-----------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611773153961_1491762371",
+      "id": "paragraph_1611773153961_1491762371",
+      "dateCreated": "2021-01-27T18:45:53+0000",
+      "dateStarted": "2021-01-27T18:47:35+0000",
+      "dateFinished": "2021-01-27T18:47:36+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59343"
+    },
+    {
+      "text": "%sh\n\nhdfs dfs -ls /apps/spark/warehouse/*",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:48:02+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sh",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Java HotSpot(TM) 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000c0000000, 703594496, 0) failed; error='Cannot allocate memory' (errno=12)\n#\n# There is insufficient memory for the Java Runtime Environment to continue.\n# Native memory allocation (mmap) failed to map 703594496 bytes for committing reserved memory.\n# An error report file with more information is saved as:\n# /home/zeppelin/hs_err_pid4727.log\n"
+          },
+          {
+            "type": "TEXT",
+            "data": "ExitValue: 1"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611773278218_1298626644",
+      "id": "paragraph_1611773278218_1298626644",
+      "dateCreated": "2021-01-27T18:47:58+0000",
+      "dateStarted": "2021-01-27T18:48:02+0000",
+      "dateFinished": "2021-01-27T18:48:02+0000",
+      "status": "ERROR",
+      "$$hashKey": "object:59344"
+    },
+    {
+      "title": "Партиции на диске",
+      "text": "%sh\n\nhdfs dfs -ls /apps/spark/warehouse/*",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:47:39+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sh",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "#\n# There is insufficient memory for the Java Runtime Environment to continue.\n# Native memory allocation (mmap) failed to map 703594496 bytes for committing reserved memory.\n# An error report file with more information is saved as:\n# /home/zeppelin/hs_err_pid4284.log\nJava HotSpot(TM) 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000c0000000, 703594496, 0) failed; error='Cannot allocate memory' (errno=12)\n"
+          },
+          {
+            "type": "TEXT",
+            "data": "ExitValue: 1"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_372900208",
+      "id": "20201119-091130_392962640",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "dateStarted": "2021-01-27T18:47:39+0000",
+      "dateFinished": "2021-01-27T18:47:39+0000",
+      "status": "ERROR",
+      "$$hashKey": "object:59345"
+    },
+    {
+      "text": "spark.table(\"homework.bank\").show",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T14:41:43+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+-------------+-------+---------+-------+-------+-------+----+--------+---+-----+--------+--------+-----+--------+--------+---+\n|age|          job|marital|education|default|balance|housing|loan| contact|day|month|duration|campaign|pdays|previous|poutcome|  y|\n+---+-------------+-------+---------+-------+-------+-------+----+--------+---+-----+--------+--------+-----+--------+--------+---+\n| 30|   unemployed|married|  primary|     no|   1787|     no|  no|cellular| 19|  oct|      79|       1|   -1|       0| unknown| no|\n| 33|     services|married|secondary|     no|   4789|    yes| yes|cellular| 11|  may|     220|       1|  339|       4| failure| no|\n| 35|   management| single| tertiary|     no|   1350|    yes|  no|cellular| 16|  apr|     185|       1|  330|       1| failure| no|\n| 30|   management|married| tertiary|     no|   1476|    yes| yes| unknown|  3|  jun|     199|       4|   -1|       0| unknown| no|\n| 59|  blue-collar|married|secondary|     no|      0|    yes|  no| unknown|  5|  may|     226|       1|   -1|       0| unknown| no|\n| 35|   management| single| tertiary|     no|    747|     no|  no|cellular| 23|  feb|     141|       2|  176|       3| failure| no|\n| 36|self-employed|married| tertiary|     no|    307|    yes|  no|cellular| 14|  may|     341|       1|  330|       2|   other| no|\n| 39|   technician|married|secondary|     no|    147|    yes|  no|cellular|  6|  may|     151|       2|   -1|       0| unknown| no|\n| 41| entrepreneur|married| tertiary|     no|    221|    yes|  no| unknown| 14|  may|      57|       2|   -1|       0| unknown| no|\n| 43|     services|married|  primary|     no|    -88|    yes| yes|cellular| 17|  apr|     313|       1|  147|       2| failure| no|\n| 39|     services|married|secondary|     no|   9374|    yes|  no| unknown| 20|  may|     273|       1|   -1|       0| unknown| no|\n| 43|       admin.|married|secondary|     no|    264|    yes|  no|cellular| 17|  apr|     113|       2|   -1|       0| unknown| no|\n| 36|   technician|married| tertiary|     no|   1109|     no|  no|cellular| 13|  aug|     328|       2|   -1|       0| unknown| no|\n| 20|      student| single|secondary|     no|    502|     no|  no|cellular| 30|  apr|     261|       1|   -1|       0| unknown|yes|\n| 31|  blue-collar|married|secondary|     no|    360|    yes| yes|cellular| 29|  jan|      89|       1|  241|       1| failure| no|\n| 40|   management|married| tertiary|     no|    194|     no| yes|cellular| 29|  aug|     189|       2|   -1|       0| unknown| no|\n| 56|   technician|married|secondary|     no|   4073|     no|  no|cellular| 27|  aug|     239|       5|   -1|       0| unknown| no|\n| 37|       admin.| single| tertiary|     no|   2317|    yes|  no|cellular| 20|  apr|     114|       1|  152|       2| failure| no|\n| 25|  blue-collar| single|  primary|     no|   -221|    yes|  no| unknown| 23|  may|     250|       1|   -1|       0| unknown| no|\n| 31|     services|married|secondary|     no|    132|     no|  no|cellular|  7|  jul|     148|       1|  152|       1|   other| no|\n+---+-------------+-------+---------+-------+-------+-------+----+--------+---+-----+--------+--------+-----+--------+--------+---+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://bigdataanalytics-head-0.novalocal:4042/jobs/job?id=0",
+              "$$hashKey": "object:62306"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_317381437",
+      "id": "20201119-185154_464618414",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "dateStarted": "2021-01-27T14:41:43+0000",
+      "dateFinished": "2021-01-27T14:41:49+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59346"
+    },
+    {
+      "text": "z.show(\n    spark.sql(\"select * from mnm\")\n    )",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T14:57:17+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {
+                    "columns": [
+                      {
+                        "name": "State",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "Color",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "Count",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {
+                          "priority": 0,
+                          "direction": "desc"
+                        },
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      }
+                    ],
+                    "scrollFocus": {},
+                    "selection": [],
+                    "grouping": {
+                      "grouping": [],
+                      "aggregations": [],
+                      "rowExpandedStates": {}
+                    },
+                    "treeView": {},
+                    "pagination": {
+                      "paginationCurrentPage": 1,
+                      "paginationPageSize": 250
+                    }
+                  },
+                  "tableColumnTypeState": {
+                    "names": {
+                      "State": "string",
+                      "Color": "string",
+                      "Count": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "State",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "Count",
+                  "index": 2,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "State\tColor\tCount\nTX\tRed\t20\nNV\tBlue\t66\nCO\tBlue\t79\nOR\tBlue\t71\nWA\tYellow\t93\nWY\tBlue\t16\nCA\tYellow\t53\nWA\tGreen\t60\nOR\tGreen\t71\nTX\tGreen\t68\nNV\tGreen\t59\nAZ\tBrown\t95\nWA\tYellow\t20\nAZ\tBlue\t75\nOR\tBrown\t72\nNV\tRed\t98\nWY\tOrange\t45\nCO\tBlue\t52\nTX\tBrown\t94\nCO\tRed\t82\nCO\tRed\t12\nCO\tRed\t17\nOR\tGreen\t16\nAZ\tGreen\t46\nNV\tRed\t43\nNM\tYellow\t15\nWA\tRed\t12\nOR\tGreen\t13\nCO\tBlue\t95\nWY\tRed\t63\nTX\tOrange\t63\nWY\tYellow\t48\nOR\tGreen\t95\nWA\tRed\t75\nCO\tOrange\t93\nNV\tOrange\t10\nWY\tGreen\t15\nWA\tGreen\t99\nCO\tBlue\t98\nCA\tGreen\t86\nUT\tRed\t92\nAZ\tBrown\t16\nCA\tRed\t100\nUT\tRed\t77\nTX\tYellow\t29\nWA\tOrange\t73\nWY\tYellow\t56\nWA\tYellow\t19\nWY\tYellow\t18\nAZ\tOrange\t49\nWA\tRed\t83\nAZ\tRed\t59\nCA\tBlue\t13\nCO\tBrown\t53\nCA\tRed\t23\nCA\tYellow\t49\nNV\tBlue\t50\nCO\tRed\t81\nUT\tGreen\t62\nNM\tGreen\t38\nNV\tYellow\t77\nTX\tBlue\t49\nWA\tBrown\t20\nOR\tGreen\t59\nOR\tRed\t66\nCA\tBlue\t34\nUT\tBlue\t97\nAZ\tBlue\t59\nOR\tBlue\t29\nCO\tRed\t17\nAZ\tOrange\t54\nTX\tGreen\t69\nNM\tBrown\t65\nWY\tOrange\t23\nNM\tGreen\t42\nOR\tGreen\t39\nWA\tOrange\t84\nUT\tYellow\t72\nNV\tYellow\t98\nTX\tYellow\t20\nUT\tBrown\t58\nCA\tRed\t67\nCO\tOrange\t42\nWA\tRed\t70\nOR\tBlue\t54\nTX\tGreen\t85\nWY\tBrown\t85\nUT\tGreen\t97\nCO\tBlue\t52\nWA\tYellow\t43\nWA\tYellow\t77\nWA\tGreen\t10\nTX\tRed\t97\nWA\tBrown\t21\nWY\tRed\t22\nWY\tYellow\t42\nWA\tOrange\t30\nNV\tOrange\t48\nWA\tBlue\t59\nCO\tOrange\t22\nCA\tOrange\t25\nCA\tYellow\t69\nWY\tBlue\t59\nUT\tBrown\t77\nTX\tGreen\t82\nCA\tOrange\t91\nTX\tBrown\t96\nWY\tBlue\t53\nWA\tBlue\t42\nTX\tGreen\t74\nAZ\tBrown\t79\nOR\tOrange\t85\nCO\tOrange\t21\nAZ\tYellow\t48\nWA\tBlue\t37\nNV\tBlue\t49\nCA\tBrown\t95\nCO\tBrown\t53\nTX\tRed\t16\nCO\tBrown\t56\nNV\tRed\t90\nWY\tBrown\t87\nUT\tYellow\t56\nNM\tYellow\t21\nCA\tYellow\t41\nCA\tOrange\t71\nUT\tYellow\t97\nCA\tBrown\t58\nWY\tBrown\t43\nNM\tBlue\t15\nAZ\tYellow\t72\nWA\tBrown\t38\nCO\tGreen\t44\nNV\tBrown\t65\nAZ\tYellow\t94\nNV\tRed\t94\nCA\tBrown\t92\nWA\tOrange\t94\nAZ\tOrange\t53\nWY\tGreen\t18\nNM\tOrange\t69\nCA\tBlue\t39\nNM\tGreen\t32\nWA\tGreen\t68\nAZ\tGreen\t77\nUT\tRed\t46\nNM\tGreen\t87\nCO\tRed\t78\nUT\tBlue\t48\nNV\tBrown\t10\nNM\tOrange\t77\nUT\tGreen\t60\nWA\tYellow\t49\nOR\tOrange\t18\nOR\tYellow\t72\nCO\tOrange\t41\nAZ\tBlue\t82\nUT\tBrown\t78\nUT\tOrange\t24\nUT\tGreen\t97\nWA\tBrown\t26\nCO\tBrown\t98\nCO\tBlue\t14\nWY\tYellow\t78\nUT\tOrange\t34\nWA\tBlue\t18\nCO\tBlue\t89\nTX\tBlue\t80\nUT\tYellow\t81\nNM\tYellow\t75\nWY\tGreen\t10\nCO\tRed\t79\nUT\tBrown\t98\nWA\tBlue\t84\nNM\tBlue\t46\nAZ\tBlue\t16\nWA\tBrown\t17\nTX\tBlue\t68\nNM\tGreen\t67\nAZ\tGreen\t89\nOR\tBrown\t48\nWY\tGreen\t91\nWA\tBrown\t52\nAZ\tGreen\t29\nWY\tBrown\t30\nNM\tRed\t50\nNV\tBrown\t49\nCA\tBlue\t99\nWY\tOrange\t81\nUT\tGreen\t41\nOR\tBrown\t35\nTX\tRed\t13\nWY\tBlue\t80\nOR\tGreen\t76\nCO\tYellow\t74\nUT\tGreen\t33\nTX\tBrown\t55\nCO\tGreen\t22\nWY\tOrange\t99\nTX\tOrange\t93\nTX\tYellow\t83\nOR\tGreen\t77\nCO\tYellow\t37\nCO\tBlue\t44\nCA\tBrown\t80\nWY\tBrown\t36\nWA\tBrown\t26\nNV\tGreen\t49\nAZ\tRed\t93\nTX\tYellow\t19\nCO\tYellow\t63\nTX\tYellow\t81\nTX\tRed\t100\nCA\tRed\t45\nUT\tBrown\t59\nNM\tBrown\t66\nTX\tRed\t95\nOR\tYellow\t28\nAZ\tYellow\t83\nCO\tRed\t52\nNV\tRed\t23\nWA\tGreen\t27\nWY\tYellow\t90\nNM\tYellow\t29\nCA\tGreen\t73\nNV\tBrown\t34\nCA\tOrange\t32\nTX\tRed\t44\nWA\tBrown\t76\nCO\tBlue\t90\nCO\tRed\t82\nNV\tOrange\t58\nNM\tRed\t40\nTX\tBlue\t19\nNV\tOrange\t84\nNM\tGreen\t61\nUT\tBrown\t92\nAZ\tOrange\t50\nAZ\tYellow\t49\nCA\tBlue\t65\nNM\tRed\t50\nWA\tYellow\t57\nTX\tYellow\t64\nCO\tRed\t94\nAZ\tYellow\t80\nTX\tBlue\t98\nOR\tBrown\t48\nNM\tBlue\t98\nAZ\tYellow\t80\nOR\tOrange\t91\nCA\tBrown\t64\nOR\tGreen\t39\nNV\tYellow\t76\nNM\tRed\t53\nUT\tYellow\t35\nAZ\tBlue\t24\nWY\tRed\t87\nWY\tGreen\t57\nNM\tRed\t47\nCO\tBrown\t57\nWY\tGreen\t97\nWA\tYellow\t31\nWY\tBrown\t81\nCA\tRed\t27\nWA\tYellow\t58\nNM\tOrange\t70\nWY\tGreen\t39\nWA\tRed\t38\nNM\tBrown\t99\nCA\tBrown\t94\nCO\tYellow\t14\nCO\tGreen\t25\nNV\tRed\t52\nWY\tBrown\t48\nNV\tOrange\t65\nAZ\tYellow\t41\nWY\tGreen\t68\nUT\tGreen\t23\nWA\tGreen\t58\nNM\tOrange\t41\nWY\tOrange\t56\nWY\tRed\t70\nCO\tGreen\t58\nUT\tOrange\t36\nCA\tRed\t50\nWA\tRed\t10\nCA\tYellow\t42\nAZ\tGreen\t99\nNM\tBrown\t36\nUT\tGreen\t77\nTX\tGreen\t91\nWA\tOrange\t91\nOR\tBrown\t16\nCA\tOrange\t87\nTX\tYellow\t70\nWA\tGreen\t29\nNM\tBlue\t70\nTX\tRed\t55\nWY\tGreen\t86\nOR\tBlue\t96\nOR\tBlue\t37\nWY\tBlue\t33\nNM\tGreen\t83\nUT\tOrange\t87\nWY\tYellow\t62\nWY\tRed\t23\nTX\tBrown\t59\nCO\tGreen\t40\nCA\tBrown\t41\nAZ\tBrown\t90\nWA\tYellow\t92\nOR\tGreen\t76\nWA\tBlue\t46\nCA\tRed\t52\nNM\tBlue\t52\nWY\tOrange\t63\nOR\tGreen\t14\nAZ\tYellow\t23\nCA\tBrown\t84\nNM\tOrange\t46\nWY\tGreen\t100\nCA\tRed\t49\nUT\tBrown\t67\nUT\tBrown\t52\nAZ\tBrown\t41\nOR\tBlue\t20\nCA\tYellow\t94\nCO\tBlue\t27\nCA\tYellow\t89\nNM\tBlue\t82\nUT\tYellow\t26\nAZ\tGreen\t35\nUT\tGreen\t72\nCA\tYellow\t66\nWY\tYellow\t58\nNV\tYellow\t96\nWY\tGreen\t36\nWA\tBrown\t35\nCA\tGreen\t39\nCA\tRed\t71\nOR\tBrown\t93\nOR\tBlue\t74\nUT\tGreen\t42\nNM\tYellow\t34\nNM\tRed\t22\nWY\tGreen\t48\nWY\tYellow\t59\nCA\tBlue\t43\nUT\tBlue\t21\nWA\tBrown\t96\nWA\tBlue\t62\nCO\tRed\t22\nNM\tBlue\t70\nTX\tGreen\t83\nOR\tBrown\t65\nNM\tRed\t34\nTX\tBrown\t12\nUT\tGreen\t86\nUT\tYellow\t28\nOR\tRed\t53\nTX\tBrown\t37\nWA\tBlue\t37\nUT\tRed\t35\nCO\tOrange\t72\nAZ\tBlue\t19\nUT\tBlue\t94\nOR\tBrown\t61\nUT\tOrange\t77\nTX\tRed\t45\nNV\tBrown\t72\nNM\tBlue\t81\nAZ\tYellow\t39\nOR\tYellow\t28\nWA\tGreen\t40\nUT\tOrange\t60\nTX\tBlue\t41\nTX\tGreen\t93\nCA\tOrange\t72\nCO\tOrange\t99\nNV\tBlue\t89\nTX\tBlue\t76\nAZ\tGreen\t79\nTX\tBlue\t59\nNM\tGreen\t20\nCA\tYellow\t32\nOR\tBlue\t95\nNM\tOrange\t96\nNM\tRed\t57\nUT\tBlue\t65\nWY\tBlue\t35\nWY\tBlue\t24\nUT\tOrange\t58\nTX\tOrange\t77\nWA\tBlue\t14\nCO\tBlue\t27\nCA\tBlue\t23\nWY\tBrown\t20\nCO\tBlue\t17\nWA\tYellow\t14\nCA\tGreen\t61\nCO\tBrown\t90\nAZ\tYellow\t76\nWY\tRed\t85\nCO\tBlue\t22\nUT\tBrown\t50\nWY\tOrange\t75\nOR\tYellow\t25\nOR\tGreen\t76\nCA\tBlue\t99\nCO\tGreen\t27\nNV\tOrange\t45\nOR\tRed\t80\nUT\tYellow\t92\nWA\tBrown\t16\nAZ\tBrown\t39\nNM\tBlue\t13\nCO\tYellow\t17\nUT\tOrange\t55\nOR\tRed\t49\nAZ\tGreen\t36\nAZ\tYellow\t37\nCA\tRed\t34\nWY\tBlue\t57\nTX\tBlue\t60\nUT\tYellow\t99\nWY\tGreen\t23\nCA\tGreen\t53\nAZ\tBrown\t43\nTX\tOrange\t18\nCO\tGreen\t54\nNV\tRed\t92\nTX\tBlue\t91\nAZ\tOrange\t77\nWA\tBrown\t58\nTX\tOrange\t73\nWY\tBlue\t62\nCA\tBlue\t89\nAZ\tGreen\t92\nWY\tBrown\t67\nAZ\tYellow\t14\nUT\tBrown\t56\nTX\tOrange\t28\nUT\tBrown\t19\nWA\tBlue\t42\nNM\tYellow\t30\nWY\tOrange\t81\nCO\tBrown\t72\nNM\tBlue\t21\nCA\tBlue\t65\nAZ\tBlue\t38\nAZ\tOrange\t39\nAZ\tBrown\t42\nNV\tOrange\t21\nCO\tBrown\t26\nWY\tOrange\t15\nCO\tRed\t67\nUT\tYellow\t34\nAZ\tYellow\t71\nNV\tBlue\t12\nAZ\tGreen\t25\nNM\tRed\t65\nOR\tOrange\t20\nNM\tRed\t14\nCO\tOrange\t79\nTX\tOrange\t99\nAZ\tGreen\t58\nWA\tBrown\t12\nUT\tBrown\t60\nCO\tRed\t93\nUT\tBrown\t72\nAZ\tOrange\t88\nCA\tYellow\t34\nWY\tYellow\t32\nNM\tGreen\t99\nOR\tBlue\t89\nTX\tYellow\t60\nTX\tGreen\t45\nOR\tYellow\t40\nWA\tRed\t66\nCO\tYellow\t43\nWA\tBlue\t47\nWA\tGreen\t83\nWA\tOrange\t37\nWY\tYellow\t36\nUT\tBlue\t19\nNM\tOrange\t11\nTX\tYellow\t15\nWA\tOrange\t41\nCO\tRed\t90\nTX\tYellow\t52\nNV\tRed\t72\nNM\tYellow\t52\nWA\tGreen\t37\nOR\tYellow\t82\nCO\tGreen\t31\nNV\tYellow\t99\nWA\tBrown\t91\nAZ\tOrange\t50\nCA\tBlue\t42\nTX\tYellow\t15\nWY\tBlue\t65\nNM\tGreen\t64\nCO\tOrange\t29\nWA\tOrange\t61\nUT\tRed\t83\nCO\tBlue\t73\nWA\tBlue\t42\nWA\tBrown\t59\nOR\tBrown\t79\nCO\tGreen\t26\nOR\tRed\t92\nWY\tGreen\t23\nNV\tRed\t39\nCA\tOrange\t70\nUT\tOrange\t14\nCA\tOrange\t10\nNM\tGreen\t82\nWA\tBlue\t15\nTX\tRed\t91\nUT\tRed\t88\nWY\tRed\t10\nWA\tYellow\t74\nWA\tGreen\t96\nCO\tBlue\t47\nNV\tBlue\t13\nUT\tBlue\t52\nCO\tOrange\t65\nOR\tOrange\t33\nCO\tYellow\t77\nCO\tOrange\t19\nOR\tBrown\t89\nCA\tRed\t83\nNM\tBrown\t75\nNV\tOrange\t38\nWY\tGreen\t95\nAZ\tGreen\t54\nNM\tOrange\t22\nTX\tOrange\t82\nCO\tYellow\t72\nTX\tYellow\t67\nUT\tBlue\t19\nOR\tRed\t55\nAZ\tBrown\t69\nTX\tBlue\t26\nCA\tBrown\t34\nCA\tOrange\t48\nAZ\tOrange\t64\nWY\tGreen\t62\nNV\tBrown\t41\nWA\tGreen\t31\nCA\tRed\t57\nWA\tBrown\t53\nCA\tOrange\t71\nNV\tBrown\t69\nTX\tOrange\t25\nNV\tRed\t59\nTX\tOrange\t86\nWA\tYellow\t70\nUT\tGreen\t16\nUT\tBlue\t87\nUT\tBrown\t23\nTX\tGreen\t98\nCA\tGreen\t28\nTX\tBlue\t86\nWY\tGreen\t68\nNV\tBrown\t35\nCO\tBlue\t13\nCO\tOrange\t89\nCA\tOrange\t66\nWA\tYellow\t84\nOR\tGreen\t64\nOR\tRed\t45\nUT\tGreen\t65\nWY\tOrange\t21\nTX\tBrown\t18\nUT\tOrange\t59\nUT\tGreen\t49\nNV\tOrange\t98\nCA\tGreen\t48\nCA\tYellow\t25\nCO\tRed\t44\nUT\tYellow\t85\nNM\tBrown\t30\nNM\tBrown\t89\nOR\tBrown\t40\nNM\tYellow\t58\nTX\tYellow\t31\nOR\tOrange\t33\nNM\tGreen\t24\nNM\tOrange\t70\nAZ\tBrown\t93\nCA\tOrange\t96\nNV\tBrown\t36\nWY\tYellow\t49\nWA\tYellow\t34\nTX\tRed\t64\nTX\tBlue\t99\nCO\tGreen\t34\nCO\tBlue\t12\nNM\tYellow\t10\nNM\tOrange\t76\nNM\tRed\t57\nCA\tRed\t61\nCO\tYellow\t82\nUT\tBlue\t99\nWY\tRed\t80\nWA\tOrange\t51\nTX\tOrange\t86\nCO\tGreen\t20\nWA\tBrown\t10\nWA\tYellow\t40\nAZ\tOrange\t22\nNM\tGreen\t61\nCA\tBlue\t27\nNM\tBlue\t23\nUT\tGreen\t35\nUT\tOrange\t59\nTX\tYellow\t32\nWA\tYellow\t78\nAZ\tBrown\t35\nWA\tBlue\t22\nOR\tOrange\t63\nWA\tOrange\t92\nWY\tGreen\t78\nCA\tOrange\t35\nAZ\tRed\t92\nCA\tRed\t14\nWA\tRed\t52\nUT\tBlue\t22\nCA\tYellow\t57\nAZ\tYellow\t30\nCA\tGreen\t77\nWY\tYellow\t67\nNV\tYellow\t95\nAZ\tBrown\t26\nAZ\tRed\t58\nWY\tBrown\t14\nTX\tOrange\t52\nCO\tOrange\t95\nNV\tGreen\t91\nOR\tBrown\t86\nWY\tRed\t19\nTX\tBrown\t78\nWY\tOrange\t87\nCA\tRed\t91\nNV\tBrown\t50\nCO\tBrown\t28\nAZ\tOrange\t50\nUT\tBrown\t41\nCO\tYellow\t66\nUT\tBrown\t76\nOR\tRed\t30\nNM\tBrown\t30\nUT\tOrange\t21\nWY\tBlue\t48\nAZ\tGreen\t49\nTX\tBrown\t32\nNV\tBlue\t71\nNV\tYellow\t83\nOR\tYellow\t85\nAZ\tGreen\t35\nWY\tRed\t81\nWY\tOrange\t76\nUT\tGreen\t42\nWA\tRed\t17\nAZ\tBrown\t81\nTX\tBlue\t90\nAZ\tRed\t57\nWA\tGreen\t32\nNM\tYellow\t66\nUT\tOrange\t43\nTX\tYellow\t14\nWA\tOrange\t61\nNV\tYellow\t62\nWA\tGreen\t16\nOR\tYellow\t33\nTX\tOrange\t66\nUT\tOrange\t40\nUT\tRed\t100\nTX\tOrange\t28\nNV\tOrange\t26\nWA\tRed\t33\nAZ\tBlue\t85\nNV\tRed\t100\nNV\tBrown\t64\nWA\tYellow\t71\nNV\tGreen\t94\nWA\tBrown\t46\nUT\tYellow\t27\nOR\tGreen\t90\nWA\tYellow\t41\nCA\tGreen\t38\nWA\tOrange\t93\nOR\tYellow\t82\nWY\tRed\t16\nWA\tBrown\t32\nWY\tBlue\t38\nTX\tYellow\t96\nWY\tBlue\t58\nWA\tGreen\t37\nWA\tYellow\t35\nNV\tYellow\t66\nOR\tBlue\t31\nAZ\tGreen\t15\nNV\tBlue\t34\nWY\tGreen\t24\nNM\tBrown\t16\nNV\tOrange\t50\nWY\tBlue\t28\nNM\tBlue\t29\nTX\tYellow\t37\nCO\tBrown\t30\nOR\tOrange\t91\nTX\tYellow\t35\nNM\tOrange\t20\nCA\tBlue\t19\nCO\tRed\t64\nCA\tBrown\t72\nTX\tBrown\t67\nWA\tGreen\t64\nWY\tBlue\t24\nOR\tBrown\t84\nWA\tBrown\t78\nAZ\tGreen\t61\nTX\tYellow\t51\nWY\tYellow\t23\nCO\tRed\t87\nOR\tBlue\t78\nUT\tBrown\t99\nCO\tRed\t24\nNM\tRed\t43\nNM\tGreen\t66\nUT\tYellow\t82\nWA\tRed\t28\nWY\tBrown\t28\nAZ\tRed\t65\nNV\tYellow\t58\nUT\tBrown\t84\nCO\tYellow\t11\nNM\tYellow\t29\nOR\tBlue\t17\nWA\tYellow\t56\nCO\tYellow\t43\nCO\tOrange\t43\nUT\tOrange\t32\nOR\tBrown\t86\nOR\tGreen\t94\nTX\tGreen\t94\nNV\tOrange\t54\nAZ\tRed\t99\nTX\tRed\t54\nCA\tGreen\t57\nUT\tBrown\t88\nAZ\tRed\t59\nUT\tRed\t93\nCA\tGreen\t61\nNV\tYellow\t60\nOR\tRed\t98\nWY\tRed\t37\nWA\tBlue\t42\nWY\tYellow\t89\nCA\tGreen\t98\nTX\tOrange\t36\nUT\tBrown\t68\nWA\tRed\t93\nNV\tOrange\t84\nNV\tGreen\t93\nOR\tYellow\t52\nOR\tRed\t87\nUT\tGreen\t50\nNM\tRed\t64\nTX\tBlue\t59\nAZ\tBrown\t81\nWA\tBrown\t96\nCO\tOrange\t80\nNM\tBrown\t25\nNV\tBlue\t57\nCA\tBlue\t88\nAZ\tBlue\t69\nUT\tYellow\t54\nUT\tRed\t80\nCA\tYellow\t92\nNM\tBlue\t36\nWA\tGreen\t54\nWA\tBlue\t67\nAZ\tBrown\t39\nNV\tGreen\t32\nNV\tGreen\t27\nUT\tYellow\t93\nCA\tOrange\t18\nWA\tYellow\t37\nTX\tBlue\t11\nCA\tYellow\t69\nCO\tOrange\t43\nOR\tBrown\t88\nNM\tBrown\t24\nCA\tRed\t39\nCO\tYellow\t16\nWY\tOrange\t49\nOR\tRed\t73\nUT\tBlue\t38\nTX\tGreen\t87\nAZ\tOrange\t89\nNM\tGreen\t88\nWY\tBrown\t25\nWY\tRed\t24\nNV\tYellow\t61\nWY\tBlue\t43\nUT\tOrange\t22\nWA\tBrown\t97\nUT\tRed\t57\nWY\tRed\t95\nAZ\tBlue\t63\nWY\tRed\t17\nCO\tBrown\t99\nOR\tOrange\t43\nCO\tBlue\t51\nTX\tBlue\t41\nNM\tRed\t15\nWA\tBlue\t16\nCO\tGreen\t46\nWA\tRed\t13\nCA\tBlue\t81\nNM\tGreen\t84\nAZ\tBlue\t88\nUT\tYellow\t100\nUT\tYellow\t57\nWY\tBrown\t34\nAZ\tBrown\t25\nWA\tOrange\t59\nOR\tOrange\t74\nCO\tOrange\t24\nCO\tYellow\t69\nCO\tBlue\t43\nTX\tGreen\t36\nNV\tBlue\t62\nNV\tBrown\t29\nAZ\tYellow\t98\nWA\tBrown\t10\nWY\tRed\t36\nNV\tGreen\t36\nCA\tRed\t12\nCO\tBlue\t44\nUT\tOrange\t89\nNV\tRed\t24\nWA\tYellow\t95\nNM\tBrown\t86\nOR\tBrown\t29\nTX\tOrange\t41\nWA\tOrange\t14\nCO\tBrown\t87\nCO\tOrange\t96\nWA\tYellow\t91\nAZ\tGreen\t24\nUT\tGreen\t13\nNM\tGreen\t13\nNM\tBrown\t58\nOR\tOrange\t18\nWA\tYellow\t83\nUT\tBrown\t82\nWA\tBrown\t59\nWY\tBlue\t58\nTX\tYellow\t98\nWY\tOrange\t56\nTX\tYellow\t79\nCO\tBlue\t99\nCO\tBrown\t62\nWA\tOrange\t92\nCA\tBrown\t16\nUT\tBlue\t34\nNM\tRed\t88\nNM\tYellow\t95\nNM\tBlue\t76\nWY\tRed\t46\nWA\tRed\t89\nWY\tBrown\t78\nTX\tYellow\t59\nCO\tYellow\t21\nCO\tBrown\t85\nCO\tOrange\t15\nAZ\tOrange\t85\nAZ\tYellow\t85\nNM\tGreen\t68\nWY\tBlue\t50\nUT\tYellow\t93\nTX\tBrown\t88\nNV\tBrown\t10\nUT\tYellow\t37\nNM\tGreen\t54\nNV\tRed\t68\nAZ\tOrange\t61\nNM\tYellow\t73\nNV\tRed\t98\nTX\tRed\t98\nCA\tOrange\t47\nNV\tRed\t18\nWY\tBrown\t15\nTX\tYellow\t89\nTX\tBrown\t27\nTX\tRed\t10\nNM\tYellow\t63\nWA\tGreen\t70\nTX\tYellow\t86\nWA\tBrown\t55\nNM\tYellow\t48\nCA\tRed\t67\nTX\tOrange\t35\nAZ\tBlue\t85\nAZ\tGreen\t44\nWA\tGreen\t99\nWY\tBlue\t90\nUT\tBrown\t66\nTX\tBrown\t69\nTX\tOrange\t47\nAZ\tRed\t75\nOR\tBlue\t59\nWA\tOrange\t55\nWA\tOrange\t93\nWA\tGreen\t20\nWY\tBrown\t76\nCO\tYellow\t33\nNM\tBlue\t95\nTX\tGreen\t59\nWA\tBrown\t21\nAZ\tYellow\t19\nUT\tBrown\t18\nUT\tBrown\t82\nNV\tBlue\t97\nNV\tYellow\t96\nNV\tGreen\t41\nUT\tRed\t16\nCA\tYellow\t71\nNV\tBlue\t18\nTX\tGreen\t16\nCA\tRed\t22\nCA\tBrown\t96\nCO\tBlue\t26\nCA\tRed\t28\nTX\tBrown\t94\nAZ\tGreen\t54\nTX\tGreen\t14\nNM\tRed\t58\nWA\tRed\t49\nAZ\tYellow\t83\nNV\tBlue\t58\nTX\tBlue\t94\nWY\tYellow\t100\nTX\tBrown\t39\nUT\tGreen\t19\nNV\tOrange\t17\nNM\tBrown\t59\nCO\tGreen\t86\nAZ\tBrown\t68\nAZ\tBrown\t29\nNM\tRed\t57\nCO\tBrown\t15\nAZ\tOrange\t45\nWA\tBlue\t96\nOR\tBrown\t48\nUT\tBrown\t59\nWY\tOrange\t84\nWA\tYellow\t45\nWY\tGreen\t52\nUT\tRed\t90\nCO\tRed\t22\nTX\tBrown\t92\nWA\tYellow\t92\nUT\tYellow\t53\nUT\tOrange\t82\nUT\tRed\t91\nNM\tGreen\t27\nNV\tGreen\t96\nWA\tRed\t32\nCA\tBrown\t90\nWY\tBlue\t18\nNV\tOrange\t86\nNV\tRed\t34\nNV\tBrown\t30\nWY\tGreen\t57\nUT\tRed\t84\nNM\tGreen\t45\nUT\tYellow\t31\nUT\tYellow\t80\nOR\tRed\t79\nUT\tBrown\t15\nNV\tOrange\t51\nCO\tBrown\t73\nUT\tYellow\t67\nWA\tBrown\t88\nCA\tYellow\t60\nTX\tOrange\t34\nWA\tRed\t92\nWA\tBrown\t68\nNV\tOrange\t18\nWY\tBrown\t60\nNV\tRed\t52\nTX\tGreen\t45\nWA\tRed\t82\nWA\tGreen\t29\nUT\tRed\t34\n"
+          },
+          {
+            "type": "HTML",
+            "data": "<div class=\"result-alert alert-warning\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button><strong>Output is truncated</strong> to 1000 rows. Learn more about <strong>zeppelin.spark.maxResult</strong></div>\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://bigdataanalytics-head-0.novalocal:4042/jobs/job?id=1",
+              "$$hashKey": "object:62410"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_905112301",
+      "id": "20201119-183637_1720828841",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "dateStarted": "2021-01-27T14:57:17+0000",
+      "dateFinished": "2021-01-27T15:00:29+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59347"
+    },
+    {
+      "text": "",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_291184288",
+      "id": "20201119-183749_1760572595",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59348"
+    },
+    {
+      "title": "Перезаписываем на большее число партиций",
+      "text": "%pyspark\n\ndf \\\n.repartition(10) \\\n.write.mode(\"overwrite\")\\\n.saveAsTable(\"default.mnm\")",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:53:09+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Hive Session ID = 33ebbc05-eb47-4d57-be3d-6a8dcaac3e1b\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://bigdataanalytics-head-0.novalocal:4043/jobs/job?id=1",
+              "$$hashKey": "object:62510"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_905557310",
+      "id": "20201119-091130_207597223",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "dateStarted": "2021-01-27T18:53:09+0000",
+      "dateFinished": "2021-01-27T18:53:14+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59349"
+    },
+    {
+      "title": "Проверяем",
+      "text": "%sh\n\n\nhdfs dfs -ls /apps/spark/warehouse/mnm",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:53:12+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sh",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Found 11 items\n-rw-r--r--   2 zeppelin hdfs          0 2021-01-27 18:53 /apps/spark/warehouse/mnm/_SUCCESS\n-rw-r--r--   2 zeppelin hdfs      18869 2021-01-27 18:53 /apps/spark/warehouse/mnm/part-00000-041c6364-a06e-4a53-a021-5e34d6cd3ac9-c000.snappy.parquet\n-rw-r--r--   2 zeppelin hdfs      18870 2021-01-27 18:53 /apps/spark/warehouse/mnm/part-00001-041c6364-a06e-4a53-a021-5e34d6cd3ac9-c000.snappy.parquet\n-rw-r--r--   2 zeppelin hdfs      18868 2021-01-27 18:53 /apps/spark/warehouse/mnm/part-00002-041c6364-a06e-4a53-a021-5e34d6cd3ac9-c000.snappy.parquet\n-rw-r--r--   2 zeppelin hdfs      18868 2021-01-27 18:53 /apps/spark/warehouse/mnm/part-00003-041c6364-a06e-4a53-a021-5e34d6cd3ac9-c000.snappy.parquet\n-rw-r--r--   2 zeppelin hdfs      18868 2021-01-27 18:53 /apps/spark/warehouse/mnm/part-00004-041c6364-a06e-4a53-a021-5e34d6cd3ac9-c000.snappy.parquet\n-rw-r--r--   2 zeppelin hdfs      18870 2021-01-27 18:53 /apps/spark/warehouse/mnm/part-00005-041c6364-a06e-4a53-a021-5e34d6cd3ac9-c000.snappy.parquet\n-rw-r--r--   2 zeppelin hdfs      18869 2021-01-27 18:53 /apps/spark/warehouse/mnm/part-00006-041c6364-a06e-4a53-a021-5e34d6cd3ac9-c000.snappy.parquet\n-rw-r--r--   2 zeppelin hdfs      18870 2021-01-27 18:53 /apps/spark/warehouse/mnm/part-00007-041c6364-a06e-4a53-a021-5e34d6cd3ac9-c000.snappy.parquet\n-rw-r--r--   2 zeppelin hdfs      18870 2021-01-27 18:53 /apps/spark/warehouse/mnm/part-00008-041c6364-a06e-4a53-a021-5e34d6cd3ac9-c000.snappy.parquet\n-rw-r--r--   2 zeppelin hdfs      18870 2021-01-27 18:53 /apps/spark/warehouse/mnm/part-00009-041c6364-a06e-4a53-a021-5e34d6cd3ac9-c000.snappy.parquet\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_1508043963",
+      "id": "20201119-091129_809152569",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "dateStarted": "2021-01-27T18:53:12+0000",
+      "dateFinished": "2021-01-27T18:53:16+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59350"
+    },
+    {
+      "title": "Читаем и смотрим количество tasks",
+      "text": "%pyspark\n\nspark.table(\"default.mnm\").count()",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "99999\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_636310078",
+      "id": "20201119-091835_291608152",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59351"
+    },
+    {
+      "text": "%pyspark\n\nspark.table(\"default.mnm\").rdd.getNumPartitions()",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "2\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_1815695302",
+      "id": "20201119-091835_353155606",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59352"
+    },
+    {
+      "title": "Сохранение таблицы для ДЗ",
+      "text": "\nimport scala.io.Source._\nimport org.apache.spark.sql.{Dataset, SparkSession}\n\nval url = \"https://s3.amazonaws.com/apache-zeppelin/tutorial/bank/bank.csv\"\nvar res = fromURL(url).mkString.stripMargin.lines.toList\nval csvData: Dataset[String] = spark.sparkContext.parallelize(res).toDS()\n\nval bank = spark.read.option(\"header\", true).option(\"delimiter\", \";\").option(\"inferSchema\",true).csv(csvData)\nbank.printSchema()\n\nbank.write.mode(\"overwrite\").saveAsTable(\"homework.bank\")\n\n\nspark.sql(\"refresh table homework.bank\")\nspark.table(\"homework.bank\")\n.show",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- age: integer (nullable = true)\n |-- job: string (nullable = true)\n |-- marital: string (nullable = true)\n |-- education: string (nullable = true)\n |-- default: string (nullable = true)\n |-- balance: integer (nullable = true)\n |-- housing: string (nullable = true)\n |-- loan: string (nullable = true)\n |-- contact: string (nullable = true)\n |-- day: integer (nullable = true)\n |-- month: string (nullable = true)\n |-- duration: integer (nullable = true)\n |-- campaign: integer (nullable = true)\n |-- pdays: integer (nullable = true)\n |-- previous: integer (nullable = true)\n |-- poutcome: string (nullable = true)\n |-- y: string (nullable = true)\n\n+---+-------------+-------+---------+-------+-------+-------+----+--------+---+-----+--------+--------+-----+--------+--------+---+\n|age|          job|marital|education|default|balance|housing|loan| contact|day|month|duration|campaign|pdays|previous|poutcome|  y|\n+---+-------------+-------+---------+-------+-------+-------+----+--------+---+-----+--------+--------+-----+--------+--------+---+\n| 30|   unemployed|married|  primary|     no|   1787|     no|  no|cellular| 19|  oct|      79|       1|   -1|       0| unknown| no|\n| 33|     services|married|secondary|     no|   4789|    yes| yes|cellular| 11|  may|     220|       1|  339|       4| failure| no|\n| 35|   management| single| tertiary|     no|   1350|    yes|  no|cellular| 16|  apr|     185|       1|  330|       1| failure| no|\n| 30|   management|married| tertiary|     no|   1476|    yes| yes| unknown|  3|  jun|     199|       4|   -1|       0| unknown| no|\n| 59|  blue-collar|married|secondary|     no|      0|    yes|  no| unknown|  5|  may|     226|       1|   -1|       0| unknown| no|\n| 35|   management| single| tertiary|     no|    747|     no|  no|cellular| 23|  feb|     141|       2|  176|       3| failure| no|\n| 36|self-employed|married| tertiary|     no|    307|    yes|  no|cellular| 14|  may|     341|       1|  330|       2|   other| no|\n| 39|   technician|married|secondary|     no|    147|    yes|  no|cellular|  6|  may|     151|       2|   -1|       0| unknown| no|\n| 41| entrepreneur|married| tertiary|     no|    221|    yes|  no| unknown| 14|  may|      57|       2|   -1|       0| unknown| no|\n| 43|     services|married|  primary|     no|    -88|    yes| yes|cellular| 17|  apr|     313|       1|  147|       2| failure| no|\n| 39|     services|married|secondary|     no|   9374|    yes|  no| unknown| 20|  may|     273|       1|   -1|       0| unknown| no|\n| 43|       admin.|married|secondary|     no|    264|    yes|  no|cellular| 17|  apr|     113|       2|   -1|       0| unknown| no|\n| 36|   technician|married| tertiary|     no|   1109|     no|  no|cellular| 13|  aug|     328|       2|   -1|       0| unknown| no|\n| 20|      student| single|secondary|     no|    502|     no|  no|cellular| 30|  apr|     261|       1|   -1|       0| unknown|yes|\n| 31|  blue-collar|married|secondary|     no|    360|    yes| yes|cellular| 29|  jan|      89|       1|  241|       1| failure| no|\n| 40|   management|married| tertiary|     no|    194|     no| yes|cellular| 29|  aug|     189|       2|   -1|       0| unknown| no|\n| 56|   technician|married|secondary|     no|   4073|     no|  no|cellular| 27|  aug|     239|       5|   -1|       0| unknown| no|\n| 37|       admin.| single| tertiary|     no|   2317|    yes|  no|cellular| 20|  apr|     114|       1|  152|       2| failure| no|\n| 25|  blue-collar| single|  primary|     no|   -221|    yes|  no| unknown| 23|  may|     250|       1|   -1|       0| unknown| no|\n| 31|     services|married|secondary|     no|    132|     no|  no|cellular|  7|  jul|     148|       1|  152|       1|   other| no|\n+---+-------------+-------+---------+-------+-------+-------+----+--------+---+-----+--------+--------+-----+--------+--------+---+\nonly showing top 20 rows\n\nimport scala.io.Source._\nimport org.apache.spark.sql.{Dataset, SparkSession}\nurl: String = https://s3.amazonaws.com/apache-zeppelin/tutorial/bank/bank.csv\nres: List[String] = List(\"age\";\"job\";\"marital\";\"education\";\"default\";\"balance\";\"housing\";\"loan\";\"contact\";\"day\";\"month\";\"duration\";\"campaign\";\"pdays\";\"previous\";\"poutcome\";\"y\", 30;\"unemployed\";\"married\";\"primary\";\"no\";1787;\"no\";\"no\";\"cellular\";19;\"oct\";79;1;-1;0;\"unknown\";\"no\", 33;\"services\";\"married\";\"secondary\";\"no\";4789;\"yes\";\"yes\";\"cellular\";11;\"may\";220;1;339;4;\"failure\";\"no\", 35;\"management\";\"single\";\"tertiary\";\"no\";1350;\"yes\";\"no\";\"cellular\";16;\"apr\";185;1;330;1;\"failure\";\"no\", 30;\"management\";\"married\";\"tertiary\";\"no\";1476;\"yes\";\"yes\";\"unknown\";3;\"jun\";199;4;-1;0;\"unknown\";\"no\", 59;\"blue-collar\";\"married\";\"secondary\";\"no\";0;\"y..."
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_2090795521",
+      "id": "20201119-091834_845082435",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59353"
+    },
+    {
+      "text": "spark.table(\"homework.bank\")",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res3: org.apache.spark.sql.DataFrame = [age: int, job: string ... 15 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_341945791",
+      "id": "20201119-091834_818225723",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59354"
+    },
+    {
+      "title": "Zeppelin Dynamic Form",
+      "text": "%pyspark\n\nprint(\"Hello \" + z.textbox(\"name\"))",
+      "user": "anonymous",
+      "dateUpdated": "2021-02-01T09:08:23+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {
+          "name": "World"
+        },
+        "forms": {
+          "name": {
+            "type": "TextBox",
+            "name": "name",
+            "displayName": "name",
+            "defaultValue": "",
+            "hidden": false,
+            "$$hashKey": "object:60308"
+          }
+        }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Hello World\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_1693625491",
+      "id": "20201119-092639_1461880911",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "dateStarted": "2021-02-01T09:08:23+0000",
+      "dateFinished": "2021-02-01T09:08:23+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59355"
+    },
+    {
+      "title": "Задание схемы DataFrame",
+      "text": "%pyspark\n\nschema = \"`Id` INT, `First` STRING, `Last` STRING, `Url` STRING, `Published` STRING, `Hits` INT, `Campaigns` ARRAY<STRING>\"\n\n# Create our static data\ndata = [\n    [1, \"Jules\", \"Damji\", \"https://tinyurl.1\", \"1/4/2016\", 4535, [\"twitter\",\"LinkedIn\"]],\n    [2, \"Brooke\",\"Wenig\", \"https://tinyurl.2\", \"5/5/2018\", 8908, [\"twitter\", \"LinkedIn\"]],\n    [3, \"Denny\", \"Lee\", \"https://tinyurl.3\", \"6/7/2019\", 7659, [\"web\", \"twitter\", \"FB\", \"LinkedIn\"]],\n    [4, \"Tathagata\", \"Das\", \"https://tinyurl.4\", \"5/12/2018\", 10568, [\"twitter\", \"FB\"]],\n    [5, \"Matei\",\"Zaharia\", \"https://tinyurl.5\", \"5/14/2014\", 40578, [\"web\", \"twitter\", \"FB\", \"LinkedIn\"]],\n    [6, \"Reynold\", \"Xin\", \"https://tinyurl.6\", \"3/2/2015\", 25568, [\"twitter\", \"LinkedIn\"]]\n]\n\n# Create a DataFrame using the schema defined above\nblogs_df = spark.createDataFrame(data, schema)\n# Show the DataFrame; it should reflect our table above\nblogs_df.show()\n# Print the schema used by Spark to process the DataFrame\nprint(blogs_df.printSchema())",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Py4JJavaError: An error occurred while calling o661.defaultParallelism.\n: java.lang.IllegalStateException: Cannot call methods on a stopped SparkContext.\nThis stopped SparkContext was created at:\n\norg.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:925)\nsun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nsun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\nsun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\njava.lang.reflect.Method.invoke(Method.java:498)\norg.apache.zeppelin.spark.BaseSparkScalaInterpreter.spark2CreateContext(BaseSparkScalaInterpreter.scala:233)\norg.apache.zeppelin.spark.BaseSparkScalaInterpreter.createSparkContext(BaseSparkScalaInterpreter.scala:165)\norg.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:89)\norg.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)\norg.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)\norg.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)\norg.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)\norg.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)\norg.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)\norg.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)\norg.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:617)\norg.apache.zeppelin.scheduler.Job.run(Job.java:188)\norg.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)\njava.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)\njava.util.concurrent.FutureTask.run(FutureTask.java:266)\n\nThe currently active SparkContext was created at:\n\n(No active SparkContext.)\n         \n\tat org.apache.spark.SparkContext.assertNotStopped(SparkContext.scala:99)\n\tat org.apache.spark.SparkContext.defaultParallelism(SparkContext.scala:2337)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\n\tat py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)\n\tat py4j.Gateway.invoke(Gateway.java:282)\n\tat py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\n\tat py4j.commands.CallCommand.execute(CallCommand.java:79)\n\tat py4j.GatewayConnection.run(GatewayConnection.java:238)\n\tat java.lang.Thread.run(Thread.java:748)\n\n(<class 'py4j.protocol.Py4JJavaError'>, Py4JJavaError(u'An error occurred while calling o661.defaultParallelism.\\n', JavaObject id=o662), <traceback object at 0x7fb5010451b8>)"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_903035279",
+      "id": "20201218-165840_1067443582",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59356"
+    },
+    {
+      "text": "%pyspark\n\nspark.read.csv(\"/user/admin/sf-fire-calls.csv\").show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------+------+--------------+----------------+----------+----------+--------------------+--------------------+--------------------+----+-------+---------+-----------+----+----------------+--------+-------------+-------+-------------+---------+--------------+--------------------+--------------------+------------------+--------------------+--------------------+-------------+---------+\n|       _c0|   _c1|           _c2|             _c3|       _c4|       _c5|                 _c6|                 _c7|                 _c8| _c9|   _c10|     _c11|       _c12|_c13|            _c14|    _c15|         _c16|   _c17|         _c18|     _c19|          _c20|                _c21|                _c22|              _c23|                _c24|                _c25|         _c26|     _c27|\n+----------+------+--------------+----------------+----------+----------+--------------------+--------------------+--------------------+----+-------+---------+-----------+----+----------------+--------+-------------+-------+-------------+---------+--------------+--------------------+--------------------+------------------+--------------------+--------------------+-------------+---------+\n|CallNumber|UnitID|IncidentNumber|        CallType|  CallDate| WatchDate|CallFinalDisposition|       AvailableDtTm|             Address|City|Zipcode|Battalion|StationArea| Box|OriginalPriority|Priority|FinalPriority|ALSUnit|CallTypeGroup|NumAlarms|      UnitType|UnitSequenceInCal...|FirePreventionDis...|SupervisorDistrict|        Neighborhood|            Location|        RowID|    Delay|\n|  20110016|   T13|       2003235|  Structure Fire|01/11/2002|01/10/2002|               Other|01/11/2002 01:51:...|2000 Block of CAL...|  SF|  94109|      B04|         38|3362|               3|       3|            3|  false|         null|        1|         TRUCK|                   2|                   4|                 5|     Pacific Heights|(37.7895840679362...|020110016-T13|     2.95|\n|  20110022|   M17|       2003241|Medical Incident|01/11/2002|01/10/2002|               Other|01/11/2002 03:01:...|0 Block of SILVER...|  SF|  94124|      B10|         42|6495|               3|       3|            3|   true|         null|        1|         MEDIC|                   1|                  10|                10|Bayview Hunters P...|(37.7337623673897...|020110022-M17|      4.7|\n|  20110023|   M41|       2003242|Medical Incident|01/11/2002|01/10/2002|               Other|01/11/2002 02:39:...|MARKET ST/MCALLIS...|  SF|  94102|      B03|         01|1455|               3|       3|            3|   true|         null|        1|         MEDIC|                   2|                   3|                 6|          Tenderloin|(37.7811772186856...|020110023-M41|2.4333334|\n|  20110032|   E11|       2003250|    Vehicle Fire|01/11/2002|01/10/2002|               Other|01/11/2002 04:16:...|APPLETON AV/MISSI...|  SF|  94110|      B06|         32|5626|               3|       3|            3|  false|         null|        1|        ENGINE|                   1|                   6|                 9|      Bernal Heights|(37.7388432849018...|020110032-E11|      1.5|\n|  20110043|   B04|       2003259|          Alarms|01/11/2002|01/10/2002|               Other|01/11/2002 06:01:...|1400 Block of SUT...|  SF|  94109|      B04|         03|3223|               3|       3|            3|  false|         null|        1|         CHIEF|                   2|                   4|                 2|    Western Addition|(37.7872890372638...|020110043-B04|3.4833333|\n|  20110072|   T08|       2003279|  Structure Fire|01/11/2002|01/11/2002|               Other|01/11/2002 08:03:...|  BEALE ST/FOLSOM ST|  SF|  94105|      B03|         35|2122|               3|       3|            3|  false|         null|        1|         TRUCK|                   2|                   3|                 6|Financial Distric...|(37.7886866619654...|020110072-T08|     1.75|\n|  20110125|   E33|       2003301|          Alarms|01/11/2002|01/11/2002|               Other|01/11/2002 09:46:...|0 Block of FARALL...|  SF|  94112|      B09|         33|8324|               3|       3|            3|  false|         null|        1|        ENGINE|                   2|                   9|                11|Oceanview/Merced/...|(37.7140353531157...|020110125-E33|2.7166667|\n|  20110130|   E36|       2003304|          Alarms|01/11/2002|01/11/2002|               Other|01/11/2002 09:58:...|600 Block of POLK ST|  SF|  94102|      B02|         03|3114|               3|       3|            3|  false|         null|        1|        ENGINE|                   1|                   2|                 6|          Tenderloin|(37.7826266328595...|020110130-E36|1.7833333|\n|  20110197|   E05|       2003343|Medical Incident|01/11/2002|01/11/2002|               Other|01/11/2002 12:06:...|1500 Block of WEB...|  SF|  94115|      B04|         05|3513|               3|       3|            3|  false|         null|        1|        ENGINE|                   1|                   4|                 5|           Japantown|(37.784958590666,...|020110197-E05|1.5166667|\n|  20110215|   E06|       2003348|Medical Incident|01/11/2002|01/11/2002|               Other|01/11/2002 01:08:...|DIAMOND ST/MARKET ST|  SF|  94114|      B05|         06|5415|               3|       3|            3|  false|         null|        1|        ENGINE|                   1|                   5|                 8| Castro/Upper Market|(37.7618954753708...|020110215-E06|2.7666667|\n|  20110274|   M07|       2003381|Medical Incident|01/11/2002|01/11/2002|               Other|01/11/2002 03:31:...|2700 Block of MIS...|  SF|  94110|      B06|         11|5525|               1|       1|            2|   true|         null|        1|         MEDIC|                   1|                   6|                 9|             Mission|(37.7530339738059...|020110274-M07|2.1833334|\n|  20110275|   T15|       2003382|  Structure Fire|01/11/2002|01/11/2002|               Other|01/11/2002 02:59:...|BRUNSWICK ST/GUTT...|  SF|  94112|      B09|         43|6218|               3|       3|            3|  false|         null|        1|         TRUCK|                   1|                   9|                11|           Excelsior|(37.7105545807996...|020110275-T15|      2.5|\n|  20110304|   E03|       2003399|Medical Incident|01/11/2002|01/11/2002|               Other|01/11/2002 04:22:...|1000 Block of SUT...|  SF|  94109|      B04|         03|1557|               3|       3|            3|  false|         null|        1|        ENGINE|                   1|                   4|                 3|            Nob Hill|(37.7881263034393...|020110304-E03|2.4166667|\n|  20110308|   E14|       2003403|Medical Incident|01/11/2002|01/11/2002|               Other|01/11/2002 04:18:...|100 Block of 21ST...|  SF|  94121|      B07|         14|7173|               3|       3|            3|  false|         null|        1|        ENGINE|                   1|                   7|                 1|      Outer Richmond|(37.7850084431077...|020110308-E14|     4.95|\n|  20110313|   B10|       2003408|  Structure Fire|01/11/2002|01/11/2002|               Other|01/11/2002 04:09:...|700 Block of CAPP ST|  SF|  94110|      B06|         07|5472|               3|       3|            3|  false|         null|        1|         CHIEF|                   6|                   6|                 9|             Mission|(37.7547064357942...|020110313-B10|1.4166666|\n|  20110313|    D3|       2003408|  Structure Fire|01/11/2002|01/11/2002|               Other|01/11/2002 04:09:...|700 Block of CAPP ST|  SF|  94110|      B06|         07|5472|               3|       3|            3|  false|         null|        1|         CHIEF|                   4|                   6|                 9|             Mission|(37.7547064357942...| 020110313-D3|2.5333333|\n|  20110313|   E32|       2003408|  Structure Fire|01/11/2002|01/11/2002|               Other|01/11/2002 04:09:...|700 Block of CAPP ST|  SF|  94110|      B06|         07|5472|               3|       3|            3|   true|         null|        1|        ENGINE|                   8|                   6|                 9|             Mission|(37.7547064357942...|020110313-E32|1.8833333|\n|  20110315|   RC2|       2003409|Medical Incident|01/11/2002|01/11/2002|               Other|01/11/2002 04:34:...|200 Block of LAGU...|  SF|  94116|      B08|         20|8635|               3|       3|            3|   true|         null|        1|RESCUE CAPTAIN|                   2|                   8|                 7|  West of Twin Peaks|(37.7501117393668...|020110315-RC2|     5.35|\n|  20110330|   E14|       2003417|Medical Incident|01/11/2002|01/11/2002|               Other|01/11/2002 04:51:...|BALBOA ST/PARK PR...|  SF|  94118|      B07|         31|7145|               3|       3|            3|  false|         null|        1|        ENGINE|                   1|                   7|                 1|      Inner Richmond|(37.7768682293368...|020110330-E14|      2.0|\n+----------+------+--------------+----------------+----------+----------+--------------------+--------------------+--------------------+----+-------+---------+-----------+----+----------------+--------+-------------+-------+-------------+---------+--------------+--------------------+--------------------+------------------+--------------------+--------------------+-------------+---------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_1959308604",
+      "id": "20201119-095350_1200397555",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59357"
+    },
+    {
+      "title": "Create Dataset/DataFrame via SparkSession",
+      "text": "%pyspark\n\n# create DataFrame from python list. It can infer schema for you.\ndf1 = spark.createDataFrame([(1, \"andy\", 20, \"USA\"), (2, \"jeff\", 23, \"China\"), (3, \"james\", 18, \"USA\")]).toDF(\"id\", \"name\", \"age\", \"country\")\ndf1.printSchema()\ndf1.show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- id: long (nullable = true)\n |-- name: string (nullable = true)\n |-- age: long (nullable = true)\n |-- country: string (nullable = true)\n\n+---+-----+---+-------+\n| id| name|age|country|\n+---+-----+---+-------+\n|  1| andy| 20|    USA|\n|  2| jeff| 23|  China|\n|  3|james| 18|    USA|\n+---+-----+---+-------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_29189043",
+      "id": "20201119-143132_262434761",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59358"
+    },
+    {
+      "title": "Create DataFrame via DataFrameReader",
+      "text": "%pyspark\nimport os\nfrom pyspark.sql.types import *\n    \nSPARK_HOME = os.getenv('SPARK_HOME')\n\n# Read data from json file\n# link for this people.json (https://github.com/apache/spark/blob/master/examples/src/main/resources/people.json)\n# Use hdfs path if you are using hdfs\ndf1 = spark.read.json(\"file://\" + SPARK_HOME + \"/examples/src/main/resources/people.json\")\ndf1.printSchema()\ndf1.show()\n\n# Read data from csv file. You can customize it via spark.read.options. E.g. In the following example, we customize the sep and header\ndf2 = spark.read.options(sep=\";\", header=True).csv(\"file://\"  + SPARK_HOME + \"/examples/src/main/resources/people.csv\")\ndf2.printSchema()\ndf2.show()\n\n# Specify schema for your csv file\nfrom pyspark.sql.types import StructType, StringType, IntegerType\n\nschema = StructType().add(\"name\", StringType(), True) \\\n    .add(\"age\", IntegerType(), True) \\\n    .add(\"job\", StringType(), True)\n    \ndf3 = spark.read.options(sep=\";\", header=True) \\\n    .schema(schema) \\\n    .csv(\"file://\" + SPARK_HOME + \"/examples/src/main/resources/people.csv\") \ndf3.printSchema()\ndf3.show()\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- age: long (nullable = true)\n |-- name: string (nullable = true)\n\n+----+-------+\n| age|   name|\n+----+-------+\n|null|Michael|\n|  30|   Andy|\n|  19| Justin|\n+----+-------+\n\nroot\n |-- name: string (nullable = true)\n |-- age: string (nullable = true)\n |-- job: string (nullable = true)\n\n+-----+---+---------+\n| name|age|      job|\n+-----+---+---------+\n|Jorge| 30|Developer|\n|  Bob| 32|Developer|\n+-----+---+---------+\n\nroot\n |-- name: string (nullable = true)\n |-- age: integer (nullable = true)\n |-- job: string (nullable = true)\n\n+-----+---+---------+\n| name|age|      job|\n+-----+---+---------+\n|Jorge| 30|Developer|\n|  Bob| 32|Developer|\n+-----+---+---------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881461_1313803796",
+      "id": "20201119-143132_2024282004",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59359"
+    },
+    {
+      "title": " new column",
+      "text": "%pyspark\n\n# withColumn could be used to add new Column\ndf1 = spark.createDataFrame([(1, \"andy\", 20, \"USA\"), (2, \"jeff\", 23, \"China\"), (3, \"james\", 18, \"USA\")]).toDF(\"id\", \"name\", \"age\", \"country\")\n\ndf2 = df1.withColumn(\"age2\", df1[\"age\"] + 1)\ndf2.show()\n\n# the new column could replace the existing the column if the new column name is the same as the old column\ndf3 = df1.withColumn(\"age\", df1[\"age\"] + 1)\ndf3.show()\n\n# Besides using expression to create new column, you could also use udf to create new column\n# Use F.upper instead of upper, because the builtin udf of spark may conclifct with that of python, such as max\nimport pyspark.sql.functions as F\ndf4 = df1.withColumn(\"name\", F.upper(df1[\"name\"]))\ndf4.show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:55:10+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+-----+---+-------+----+\n| id| name|age|country|age2|\n+---+-----+---+-------+----+\n|  1| andy| 20|    USA|  21|\n|  2| jeff| 23|  China|  24|\n|  3|james| 18|    USA|  19|\n+---+-----+---+-------+----+\n\n+---+-----+---+-------+\n| id| name|age|country|\n+---+-----+---+-------+\n|  1| andy| 21|    USA|\n|  2| jeff| 24|  China|\n|  3|james| 19|    USA|\n+---+-----+---+-------+\n\n+---+-----+---+-------+\n| id| name|age|country|\n+---+-----+---+-------+\n|  1| ANDY| 20|    USA|\n|  2| JEFF| 23|  China|\n|  3|JAMES| 18|    USA|\n+---+-----+---+-------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://bigdataanalytics-head-0.novalocal:4043/jobs/job?id=2",
+              "$$hashKey": "object:63088"
+            },
+            {
+              "jobUrl": "http://bigdataanalytics-head-0.novalocal:4043/jobs/job?id=3",
+              "$$hashKey": "object:63089"
+            },
+            {
+              "jobUrl": "http://bigdataanalytics-head-0.novalocal:4043/jobs/job?id=4",
+              "$$hashKey": "object:63090"
+            },
+            {
+              "jobUrl": "http://bigdataanalytics-head-0.novalocal:4043/jobs/job?id=5",
+              "$$hashKey": "object:63091"
+            },
+            {
+              "jobUrl": "http://bigdataanalytics-head-0.novalocal:4043/jobs/job?id=6",
+              "$$hashKey": "object:63092"
+            },
+            {
+              "jobUrl": "http://bigdataanalytics-head-0.novalocal:4043/jobs/job?id=7",
+              "$$hashKey": "object:63093"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881462_1242686224",
+      "id": "20201119-155923_220546233",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "dateStarted": "2021-01-27T18:55:10+0000",
+      "dateFinished": "2021-01-27T18:55:17+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59360"
+    },
+    {
+      "title": "remove column",
+      "text": "%pyspark\ndf1 = spark.createDataFrame([(1, \"andy\", 20, \"USA\"), (2, \"jeff\", 23, \"China\"), (3, \"james\", 18, \"USA\")]).toDF(\"id\", \"name\", \"age\", \"country\")\n# drop could be used to remove Column\ndf2 = df1.drop(\"id\")\ndf2.show()\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----+---+-------+\n| name|age|country|\n+-----+---+-------+\n| andy| 20|    USA|\n| jeff| 23|  China|\n|james| 18|    USA|\n+-----+---+-------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881462_349891373",
+      "id": "20201119-155940_271972562",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59361"
+    },
+    {
+      "title": "",
+      "text": "spark.table(\"homework.bank\").show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+-------------+-------+---------+-------+-------+-------+----+--------+---+-----+--------+--------+-----+--------+--------+---+\n|age|          job|marital|education|default|balance|housing|loan| contact|day|month|duration|campaign|pdays|previous|poutcome|  y|\n+---+-------------+-------+---------+-------+-------+-------+----+--------+---+-----+--------+--------+-----+--------+--------+---+\n| 30|   unemployed|married|  primary|     no|   1787|     no|  no|cellular| 19|  oct|      79|       1|   -1|       0| unknown| no|\n| 33|     services|married|secondary|     no|   4789|    yes| yes|cellular| 11|  may|     220|       1|  339|       4| failure| no|\n| 35|   management| single| tertiary|     no|   1350|    yes|  no|cellular| 16|  apr|     185|       1|  330|       1| failure| no|\n| 30|   management|married| tertiary|     no|   1476|    yes| yes| unknown|  3|  jun|     199|       4|   -1|       0| unknown| no|\n| 59|  blue-collar|married|secondary|     no|      0|    yes|  no| unknown|  5|  may|     226|       1|   -1|       0| unknown| no|\n| 35|   management| single| tertiary|     no|    747|     no|  no|cellular| 23|  feb|     141|       2|  176|       3| failure| no|\n| 36|self-employed|married| tertiary|     no|    307|    yes|  no|cellular| 14|  may|     341|       1|  330|       2|   other| no|\n| 39|   technician|married|secondary|     no|    147|    yes|  no|cellular|  6|  may|     151|       2|   -1|       0| unknown| no|\n| 41| entrepreneur|married| tertiary|     no|    221|    yes|  no| unknown| 14|  may|      57|       2|   -1|       0| unknown| no|\n| 43|     services|married|  primary|     no|    -88|    yes| yes|cellular| 17|  apr|     313|       1|  147|       2| failure| no|\n| 39|     services|married|secondary|     no|   9374|    yes|  no| unknown| 20|  may|     273|       1|   -1|       0| unknown| no|\n| 43|       admin.|married|secondary|     no|    264|    yes|  no|cellular| 17|  apr|     113|       2|   -1|       0| unknown| no|\n| 36|   technician|married| tertiary|     no|   1109|     no|  no|cellular| 13|  aug|     328|       2|   -1|       0| unknown| no|\n| 20|      student| single|secondary|     no|    502|     no|  no|cellular| 30|  apr|     261|       1|   -1|       0| unknown|yes|\n| 31|  blue-collar|married|secondary|     no|    360|    yes| yes|cellular| 29|  jan|      89|       1|  241|       1| failure| no|\n| 40|   management|married| tertiary|     no|    194|     no| yes|cellular| 29|  aug|     189|       2|   -1|       0| unknown| no|\n| 56|   technician|married|secondary|     no|   4073|     no|  no|cellular| 27|  aug|     239|       5|   -1|       0| unknown| no|\n| 37|       admin.| single| tertiary|     no|   2317|    yes|  no|cellular| 20|  apr|     114|       1|  152|       2| failure| no|\n| 25|  blue-collar| single|  primary|     no|   -221|    yes|  no| unknown| 23|  may|     250|       1|   -1|       0| unknown| no|\n| 31|     services|married|secondary|     no|    132|     no|  no|cellular|  7|  jul|     148|       1|  152|       1|   other| no|\n+---+-------------+-------+---------+-------+-------+-------+----+--------+---+-----+--------+--------+-----+--------+--------+---+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881462_1084845324",
+      "id": "20201119-160024_1543483988",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59362"
+    },
+    {
+      "title": "Select Subset of Columns",
+      "text": "%pyspark\n\ndf1 = spark.createDataFrame([(1, \"andy\", 20, \"USA\"), (2, \"jeff\", 23, \"China\"), (3, \"james\", 18, \"USA\")]).toDF(\"id\", \"name\", \"age\", \"country\")\n# select can accept a list of string of the column names\ndf2 = df1.select(\"id\", \"name\")\ndf2.show()\n\n# select can also accept a list of Column. You can create column via $ or udf\nimport pyspark.sql.functions as F\n\ndf3 = df1.select(df1[\"id\"], F.upper(df1[\"name\"]), df1[\"age\"] + 1)\ndf3.show()\n\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:56:38+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+-----+\n| id| name|\n+---+-----+\n|  1| andy|\n|  2| jeff|\n|  3|james|\n+---+-----+\n\n+---+-----------+---------+\n| id|upper(name)|(age + 1)|\n+---+-----------+---------+\n|  1|       ANDY|       21|\n|  2|       JEFF|       24|\n|  3|      JAMES|       19|\n+---+-----------+---------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://bigdataanalytics-head-0.novalocal:4043/jobs/job?id=8",
+              "$$hashKey": "object:63275"
+            },
+            {
+              "jobUrl": "http://bigdataanalytics-head-0.novalocal:4043/jobs/job?id=9",
+              "$$hashKey": "object:63276"
+            },
+            {
+              "jobUrl": "http://bigdataanalytics-head-0.novalocal:4043/jobs/job?id=10",
+              "$$hashKey": "object:63277"
+            },
+            {
+              "jobUrl": "http://bigdataanalytics-head-0.novalocal:4043/jobs/job?id=11",
+              "$$hashKey": "object:63278"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881462_1720372299",
+      "id": "20201119-155947_1536868283",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "dateStarted": "2021-01-27T18:56:21+0000",
+      "dateFinished": "2021-01-27T18:56:21+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:59363"
+    },
+    {
+      "title": "Filter rows",
+      "text": "%pyspark\n\ndf1 = spark.createDataFrame([(1, \"andy\", 20, \"USA\"), (2, \"jeff\", 23, \"China\"), (3, \"james\", 18, \"USA\")]).toDF(\"id\", \"name\", \"age\", \"country\")\n\n# filter accept a Column \ndf2 = df1.filter(df1[\"age\"] >= 20)\ndf2.show()\n\n# To be noticed, you need to use \"&\" instead of \"&&\" or \"AND\" \ndf3 = df1.filter((df1[\"age\"] >= 20) & (df1[\"country\"] == \"China\"))\ndf3.show()\n\n\n\n\n\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+----+---+-------+\n| id|name|age|country|\n+---+----+---+-------+\n|  1|andy| 20|    USA|\n|  2|jeff| 23|  China|\n+---+----+---+-------+\n\n+---+----+---+-------+\n| id|name|age|country|\n+---+----+---+-------+\n|  2|jeff| 23|  China|\n+---+----+---+-------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881462_1440092218",
+      "id": "20201119-155950_1037202214",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59364"
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:58:10+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611773890754_2009863069",
+      "id": "paragraph_1611773890754_2009863069",
+      "dateCreated": "2021-01-27T18:58:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:59365"
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:58:18+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 4,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611773888788_1768094647",
+      "id": "paragraph_1611773888788_1768094647",
+      "dateCreated": "2021-01-27T18:58:08+0000",
+      "status": "READY",
+      "$$hashKey": "object:59366"
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-27T18:58:27+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 5,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611773901581_1666842325",
+      "id": "paragraph_1611773901581_1666842325",
+      "dateCreated": "2021-01-27T18:58:21+0000",
+      "status": "READY",
+      "$$hashKey": "object:59367"
+    },
+    {
+      "text": "",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881462_1432171778",
+      "id": "20201119-160129_1998798520",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59368"
+    },
+    {
+      "title": "Create UDF",
+      "text": "%pyspark\n\ndf1 = spark.createDataFrame([(1, \"andy\", 20, \"USA\"), (2, \"jeff\", 23, \"China\"), (3, \"james\", 18, \"USA\")]) \\\n            .toDF(\"id\", \"name\", \"age\", \"country\")\n\n# Create udf create python lambda\nfrom pyspark.sql.functions import udf\nudf1 = udf(lambda e: e.upper())\ndf2 = df1.select(udf1(df1[\"name\"]))\ndf2.show()\n\n# UDF could also be used in filter, in this case the return type must be Boolean\n# We can also use annotation to create udf\nfrom pyspark.sql.types import *\n@udf(returnType=BooleanType())\ndef udf2(e):\n    if e >= 20:\n        return True;\n    else:\n        return False\n\ndf3 = df1.filter(udf2(df1[\"age\"]))\ndf3.show()\n\n# UDF could also accept more than 1 argument.\nudf3 = udf(lambda e1, e2: e1 + \"_\" + e2)\ndf4 = df1.select(udf3(df1[\"name\"], df1[\"country\"]).alias(\"name_country\"))\ndf4.show()\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------+\n|<lambda>(name)|\n+--------------+\n|          ANDY|\n|          JEFF|\n|         JAMES|\n+--------------+\n\n+---+----+---+-------+\n| id|name|age|country|\n+---+----+---+-------+\n|  1|andy| 20|    USA|\n|  2|jeff| 23|  China|\n+---+----+---+-------+\n\n+------------+\n|name_country|\n+------------+\n|    andy_USA|\n|  jeff_China|\n|   james_USA|\n+------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881462_1609001077",
+      "id": "20201119-155951_457057931",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59369"
+    },
+    {
+      "title": "groupBy",
+      "text": "%pyspark\n\ndf1 = spark.createDataFrame([(1, \"andy\", 20, \"USA\"), (2, \"jeff\", 23, \"China\"), (3, \"james\", 18, \"USA\")]) \\\n           .toDF(\"id\", \"name\", \"age\", \"country\")\n\n# You can call agg function after groupBy directly, such as count/min/max/avg/sum\ndf2 = df1.groupBy(\"country\").count()\ndf2.show()\n\n# Pass a Map if you want to do multiple aggregation\ndf3 = df1.groupBy(\"country\").agg({\"age\": \"avg\", \"id\": \"count\"})\ndf3.show()\n\nimport pyspark.sql.functions as F\n# Or you can pass a list of agg function\ndf4 = df1.groupBy(\"country\").agg(F.avg(df1[\"age\"]).alias(\"avg_age\"), F.count(df1[\"id\"]).alias(\"count\"))\ndf4.show()\n\n# You can not pass Map if you want to do multiple aggregation on the same column as the key of Map should be unique. So in this case\n# you have to pass a list of agg functions\ndf5 = df1.groupBy(\"country\").agg(F.avg(df1[\"age\"]).alias(\"avg_age\"), F.max(df1[\"age\"]).alias(\"max_age\"))\ndf5.show()\n\n\n\n\n\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------+-----+\n|country|count|\n+-------+-----+\n|  China|    1|\n|    USA|    2|\n+-------+-----+\n\n+-------+---------+--------+\n|country|count(id)|avg(age)|\n+-------+---------+--------+\n|  China|        1|    23.0|\n|    USA|        2|    19.0|\n+-------+---------+--------+\n\n+-------+-------+-----+\n|country|avg_age|count|\n+-------+-------+-----+\n|  China|   23.0|    1|\n|    USA|   19.0|    2|\n+-------+-------+-----+\n\n+-------+-------+-------+\n|country|avg_age|max_age|\n+-------+-------+-------+\n|  China|   23.0|     23|\n|    USA|   19.0|     20|\n+-------+-------+-------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881462_1648927846",
+      "id": "20201119-155951_1376505763",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59370"
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881462_345941110",
+      "id": "20201119-160541_1487929652",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59371"
+    },
+    {
+      "title": "Join on Single Field",
+      "text": "%pyspark\n\ndf1 = spark.createDataFrame([(1, \"andy\", 20, 1), (2, \"jeff\", 23, 2), (3, \"james\", 18, 3)]).toDF(\"id\", \"name\", \"age\", \"c_id\")\ndf1.show()\n\ndf2 = spark.createDataFrame([(1, \"USA\"), (2, \"China\")]).toDF(\"c_id\", \"c_name\")\ndf2.show()\n\n# You can just specify the key name if join on the same key\ndf3 = df1.join(df2, \"c_id\")\ndf3.show()\n\n# Or you can specify the join condition expclitly in case the key is different between tables\ndf4 = df1.join(df2, df1[\"c_id\"] == df2[\"c_id\"])\ndf4.show()\n\n# You can specify the join type afte the join condition, by default it is inner join\ndf5 = df1.join(df2, df1[\"c_id\"] == df2[\"c_id\"], \"left_outer\")\ndf5.show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+-----+---+----+\n| id| name|age|c_id|\n+---+-----+---+----+\n|  1| andy| 20|   1|\n|  2| jeff| 23|   2|\n|  3|james| 18|   3|\n+---+-----+---+----+\n\n+----+------+\n|c_id|c_name|\n+----+------+\n|   1|   USA|\n|   2| China|\n+----+------+\n\n+----+---+----+---+------+\n|c_id| id|name|age|c_name|\n+----+---+----+---+------+\n|   1|  1|andy| 20|   USA|\n|   2|  2|jeff| 23| China|\n+----+---+----+---+------+\n\n+---+----+---+----+----+------+\n| id|name|age|c_id|c_id|c_name|\n+---+----+---+----+----+------+\n|  1|andy| 20|   1|   1|   USA|\n|  2|jeff| 23|   2|   2| China|\n+---+----+---+----+----+------+\n\n+---+-----+---+----+----+------+\n| id| name|age|c_id|c_id|c_name|\n+---+-----+---+----+----+------+\n|  1| andy| 20|   1|   1|   USA|\n|  3|james| 18|   3|null|  null|\n|  2| jeff| 23|   2|   2| China|\n+---+-----+---+----+----+------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881462_208185805",
+      "id": "20201119-155952_2018022643",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59372"
+    },
+    {
+      "title": "Join on Multiple Fields",
+      "text": "%pyspark\n\ndf1 = spark.createDataFrame([(\"andy\", 20, 1, 1), (\"jeff\", 23, 1, 2), (\"james\", 12, 2, 2)]).toDF(\"name\", \"age\", \"key_1\", \"key_2\")\ndf1.show()\n\ndf2 = spark.createDataFrame([(1, 1, \"USA\"), (2, 2, \"China\")]).toDF(\"key_1\", \"key_2\", \"country\")\ndf2.show()\n\n# Join on 2 fields: key_1, key_2\n\n# You can pass a list of field name if the join field names are the same in both tables\ndf3 = df1.join(df2, [\"key_1\", \"key_2\"])\ndf3.show()\n\n# Or you can specify the join condition expclitly in case when the join fields name is differetnt in the two tables\ndf4 = df1.join(df2, (df1[\"key_1\"] == df2[\"key_1\"]) & (df1[\"key_2\"] == df2[\"key_2\"]))\ndf4.show()\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----+---+-----+-----+\n| name|age|key_1|key_2|\n+-----+---+-----+-----+\n| andy| 20|    1|    1|\n| jeff| 23|    1|    2|\n|james| 12|    2|    2|\n+-----+---+-----+-----+\n\n+-----+-----+-------+\n|key_1|key_2|country|\n+-----+-----+-------+\n|    1|    1|    USA|\n|    2|    2|  China|\n+-----+-----+-------+\n\n+-----+-----+-----+---+-------+\n|key_1|key_2| name|age|country|\n+-----+-----+-----+---+-------+\n|    1|    1| andy| 20|    USA|\n|    2|    2|james| 12|  China|\n+-----+-----+-----+---+-------+\n\n+-----+---+-----+-----+-----+-----+-------+\n| name|age|key_1|key_2|key_1|key_2|country|\n+-----+---+-----+-----+-----+-----+-------+\n| andy| 20|    1|    1|    1|    1|    USA|\n|james| 12|    2|    2|    2|    2|  China|\n+-----+---+-----+-----+-----+-----+-------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881462_466354484",
+      "id": "20201119-155952_1524810954",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59373"
+    },
+    {
+      "title": "spark.sql directly",
+      "text": "%pyspark\n\ndf1 = spark.createDataFrame([(1, \"andy\", 20, \"USA\"), (2, \"jeff\", 23, \"China\"), (3, \"james\", 18, \"USA\")]) \\\n           .toDF(\"id\", \"name\", \"age\", \"country\")\n# call createOrReplaceTempView first if you want to query this DataFrame via sql\ndf1.createOrReplaceTempView(\"people\")\n# SparkSession.sql return DataFrame\ndf2 = spark.sql(\"select name, age from people\")\ndf2.show()\n\n# You need to register udf if you want to use it in sql\nspark.udf.register(\"udf1\", lambda e : e.upper())\ndf3 = spark.sql(\"select udf1(name), age from people\")\ndf3.show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----+---+\n| name|age|\n+-----+---+\n| andy| 20|\n| jeff| 23|\n|james| 18|\n+-----+---+\n\n+----------+---+\n|udf1(name)|age|\n+----------+---+\n|      ANDY| 20|\n|      JEFF| 23|\n|     JAMES| 18|\n+----------+---+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881462_889206318",
+      "id": "20201119-160613_1033868239",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59374"
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881462_263850645",
+      "id": "20201119-160537_1246577479",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59375"
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881462_1664634470",
+      "id": "20201119-160538_1567138867",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59376"
+    },
+    {
+      "title": "Задание схемы DataFrame",
+      "text": "%pyspark\n\nschema = \"`Id` INT, `First` STRING, `Last` STRING, `Url` STRING, `Published` STRING, `Hits` INT, `Campaigns` ARRAY<STRING>\"\n# Create our static data\ndata = [\n    [1, \"Jules\", \"Damji\", \"https://tinyurl.1\", \"1/4/2016\", 4535, [\"twitter\",\"LinkedIn\"]],\n    [2, \"Brooke\",\"Wenig\", \"https://tinyurl.2\", \"5/5/2018\", 8908, [\"twitter\",\n    \"LinkedIn\"]],\n    [3, \"Denny\", \"Lee\", \"https://tinyurl.3\", \"6/7/2019\", 7659, [\"web\",\n    \"twitter\", \"FB\", \"LinkedIn\"]],\n    [4, \"Tathagata\", \"Das\", \"https://tinyurl.4\", \"5/12/2018\", 10568,\n    [\"twitter\", \"FB\"]],\n    [5, \"Matei\",\"Zaharia\", \"https://tinyurl.5\", \"5/14/2014\", 40578, [\"web\",\n    \"twitter\", \"FB\", \"LinkedIn\"]],\n    [6, \"Reynold\", \"Xin\", \"https://tinyurl.6\", \"3/2/2015\", 25568,\n    [\"twitter\", \"LinkedIn\"]]\n]\n\n# Create a DataFrame using the schema defined above\nblogs_df = spark.createDataFrame(data, schema)\n# Show the DataFrame; it should reflect our table above\nblogs_df.show()\n# Print the schema used by Spark to process the DataFrame\nprint(blogs_df.printSchema())",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+---------+-------+-----------------+---------+-----+--------------------+\n| Id|    First|   Last|              Url|Published| Hits|           Campaigns|\n+---+---------+-------+-----------------+---------+-----+--------------------+\n|  1|    Jules|  Damji|https://tinyurl.1| 1/4/2016| 4535| [twitter, LinkedIn]|\n|  2|   Brooke|  Wenig|https://tinyurl.2| 5/5/2018| 8908| [twitter, LinkedIn]|\n|  3|    Denny|    Lee|https://tinyurl.3| 6/7/2019| 7659|[web, twitter, FB...|\n|  4|Tathagata|    Das|https://tinyurl.4|5/12/2018|10568|       [twitter, FB]|\n|  5|    Matei|Zaharia|https://tinyurl.5|5/14/2014|40578|[web, twitter, FB...|\n|  6|  Reynold|    Xin|https://tinyurl.6| 3/2/2015|25568| [twitter, LinkedIn]|\n+---+---------+-------+-----------------+---------+-----+--------------------+\n\nroot\n |-- Id: integer (nullable = true)\n |-- First: string (nullable = true)\n |-- Last: string (nullable = true)\n |-- Url: string (nullable = true)\n |-- Published: string (nullable = true)\n |-- Hits: integer (nullable = true)\n |-- Campaigns: array (nullable = true)\n |    |-- element: string (containsNull = true)\n\nNone\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881462_1009091216",
+      "id": "20201119-160217_137855542",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59377"
+    },
+    {
+      "text": "%pyspark\nfrom pyspark.sql.functions import *\n\n\n# Read the file into a Spark DataFrame using the CSV\n# format by inferring the schema and specifying that the\n# file contains a header, which provides column names for comma-\n# separated fields.\nmnm_df = (spark.read.format(\"csv\")\n.option(\"header\", \"true\")\n.option(\"inferSchema\", \"true\")\n.load(nmn_dataset_path))\n\n# We use the DataFrame high-level APIs. Note\n# that we don't use RDDs at all. Because some of Spark's\n# functions return the same object, we can chain function calls.\n# 1. Select from the DataFrame the fields \"State\", \"Color\", and \"Count\"\n# 2. Since we want to group each state and its M&M color count,\n# we use groupBy()\n# 3. Aggregate counts of all colors and groupBy() State and Color\n# 4 orderBy() in descending order\ncount_mnm_df = (mnm_df\n    .select(\"State\", \"Color\", \"Count\")\n    .groupBy(\"State\", \"Color\")\n    .agg(count(\"Count\").alias(\"Total\"))\n    .orderBy(\"Total\", ascending=False))\n    \n    \n# Show the resulting aggregations for all the states and colors;\n# a total count of each color per state.\n# Note show() is an action, which will trigger the above\n# query to be executed.\ncount_mnm_df.show(n=60, truncate=False)\nprint(\"Total Rows = %d\" % (count_mnm_df.count()))",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----+------+-----+\n|State|Color |Total|\n+-----+------+-----+\n|CA   |Yellow|1807 |\n|WA   |Green |1779 |\n|OR   |Orange|1743 |\n|TX   |Green |1737 |\n|TX   |Red   |1725 |\n|CA   |Green |1723 |\n|CO   |Yellow|1721 |\n|CA   |Brown |1718 |\n|CO   |Green |1713 |\n|NV   |Orange|1712 |\n|TX   |Yellow|1703 |\n|NV   |Green |1698 |\n|AZ   |Brown |1698 |\n|WY   |Green |1695 |\n|CO   |Blue  |1695 |\n|NM   |Red   |1690 |\n|AZ   |Orange|1689 |\n|NM   |Yellow|1688 |\n|NM   |Brown |1687 |\n|UT   |Orange|1684 |\n|NM   |Green |1682 |\n|UT   |Red   |1680 |\n|AZ   |Green |1676 |\n|NV   |Yellow|1675 |\n|NV   |Blue  |1673 |\n|WA   |Red   |1671 |\n|WY   |Red   |1670 |\n|WA   |Brown |1669 |\n|NM   |Orange|1665 |\n|WY   |Blue  |1664 |\n|WA   |Yellow|1663 |\n|WA   |Orange|1658 |\n|CA   |Orange|1657 |\n|NV   |Brown |1657 |\n|CO   |Brown |1656 |\n|CA   |Red   |1656 |\n|UT   |Blue  |1655 |\n|AZ   |Yellow|1654 |\n|TX   |Orange|1652 |\n|AZ   |Red   |1648 |\n|OR   |Blue  |1646 |\n|OR   |Red   |1645 |\n|UT   |Yellow|1645 |\n|CO   |Orange|1642 |\n|TX   |Brown |1641 |\n|NM   |Blue  |1638 |\n|AZ   |Blue  |1636 |\n|OR   |Green |1634 |\n|UT   |Brown |1631 |\n|WY   |Yellow|1626 |\n|WA   |Blue  |1625 |\n|CO   |Red   |1624 |\n|OR   |Brown |1621 |\n|TX   |Blue  |1614 |\n|OR   |Yellow|1614 |\n|NV   |Red   |1610 |\n|CA   |Blue  |1603 |\n|WY   |Orange|1595 |\n|UT   |Green |1591 |\n|WY   |Brown |1532 |\n+-----+------+-----+\n\nTotal Rows = 60\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881462_1050085298",
+      "id": "20201119-163436_181428921",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59378"
+    },
+    {
+      "text": "",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-21T21:34:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1611264881462_1354701206",
+      "id": "20201119-085550_2026203117",
+      "dateCreated": "2021-01-21T21:34:41+0000",
+      "status": "READY",
+      "$$hashKey": "object:59379"
+    }
+  ],
+  "name": "lecture 1",
+  "id": "2FVHCT33E",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.9.0",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/kotelnikov/lecture 1"
+}
