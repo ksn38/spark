@@ -1,4 +1,4 @@
-﻿{
+{
   "paragraphs": [
     {
       "text": "%pyspark\n\nz.show(\n    spark.table(\"homework.bank\").\\\n    groupBy(\"age\").\\\n    count()\n    )",
