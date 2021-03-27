@@ -17,6 +17,7 @@ export SPARK_KAFKA_VERSION=0.10
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
 from pyspark.sql.types import StructType, StringType
+
 kafka_brokers = "10.0.0.6:6667"
 
 #функция, чтобы выводить на консоль вместо show()
@@ -144,7 +145,8 @@ out.stop()
 ========================================================================
 from pyspark.sql import functions as F
 from pyspark.sql.types import StructType, StringType, FloatType
-kafka_brokers = "bigdataanalytics-worker-0.novalocal:6667"
+
+kafka_brokers = "10.0.0.6:6667"
 
 #Создаем стрим, читаем из Кафки.
 raw_data = spark.readStream. \
@@ -177,7 +179,7 @@ def console_output(df, freq):
         .start()
 
 #Проверяем.
-out = console_output(parsed_json, 5)
+out = console_output(parsed_json, 10)
 out.stop()
 
 #MEMORY SINK
