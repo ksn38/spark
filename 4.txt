@@ -1,0 +1,49 @@
+%pyspark
+from pyspark.ml.linalg import Vectors
+from pyspark.ml.classification import LogisticRegression, OneVsRest
+from pyspark.ml.feature import Tokenizer, RegexTokenizer, HashingTF, IDF
+from pyspark.sql.types import IntegerType
+from pyspark.ml import Pipeline
+from pyspark.ml.evaluation import MulticlassClassificationEvaluator
+
+
+tokenizer = Tokenizer(inputCol="rating_class", outputCol="rating_class_vec")
+
+regexTokenizer = RegexTokenizer(inputCol="title", outputCol="title_words", pattern="[^a-zа-яё]", gaps=True)\
+.setMinTokenLength(3)
+regexTokenized = regexTokenizer.transform(train)
+# regexTokenized.select("title", "title_words").withColumn("tokens", countTokens(col("title_words"))).show(truncate=False)
+
+hashingTF = HashingTF(inputCol="title_words", outputCol="rawFeatures", numFeatures=200000)
+featurizedData = hashingTF.transform(regexTokenized)
+# alternatively, CountVectorizer can also be used to get term frequency vectors
+
+idf = IDF(inputCol="rawFeatures", outputCol="features")
+idfModel = idf.fit(featurizedData)
+rescaledData = idfModel.transform(featurizedData)
+
+# rescaledData.select("rating", "features").show()
+
+lr = LogisticRegression(maxIter=10, regParam=0.1)
+# instantiate the One Vs Rest Classifier.
+ovr = OneVsRest(classifier=lr, featuresCol='features', labelCol='rating_class', predictionCol='prediction')
+pipeline = Pipeline(stages=[regexTokenizer, hashingTF, idf, ovr])
+
+# train the multiclass model.
+ovrModel = pipeline.fit(train)
+# score the model on test data.
+prediction = ovrModel.transform(test)
+
+evaluator = MulticlassClassificationEvaluator(predictionCol='prediction', labelCol='rating_class', metricName='f1')
+f1 = evaluator.evaluate(prediction)
+print('f1 = ', f1)
+evaluator = MulticlassClassificationEvaluator(predictionCol='prediction', labelCol='rating_class', metricName='weightedPrecision')
+precision = evaluator.evaluate(prediction)
+print('precision = ', precision)
+evaluator = MulticlassClassificationEvaluator(predictionCol='prediction', labelCol='rating_class', metricName='weightedRecall')
+recall = evaluator.evaluate(prediction)
+print('recall = ', recall)
+
+z.show(prediction)
+
+305_kozik
