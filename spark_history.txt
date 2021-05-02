@@ -1,0 +1,113 @@
+
+    1  /cassandra/bin/cqlsh 10.0.0.6
+    2  /cassandra/bin/cqlsh 10.0.0.6:6667
+    3  /cassandra/bin/cassandra
+    4  /kafka/bin/kafka-console-consumer.sh --topic tickers_json --bootstrap-server 10.0.0.6:6667
+    5  /kafka/bin/kafka-topics.sh --create --topic tickers_json --zookeeper 10.0.0.6:2181 --partitions 1 --replication-factor 2 --config retention.ms=-1
+    6  /kafka/bin/kafka-console-producer.sh --topic tickers_json --broker-list 10.0.0.6:6667
+    7  export SPARK_KAFKA_VERSION=0.10
+    8  /spark2.4/bin/pyspark --master local --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5
+    9  /cassandra/bin/cqlsh 10.0.0.18
+   10  ll
+   11  /cassandra/bin/cqlsh 10.0.0.18
+   12  /cassandra/bin/cassandra
+   13  CREATE  KEYSPACE  lesson7
+   14     WITH REPLICATION = {
+   15        'class' : 'SimpleStrategy', 'replication_factor' : 1 } ;
+   16  /cassandra/bin/cqlsh 10.0.0.18
+   17  /cassandra/bin/cqlsh
+   18  hdfs dfs -ls
+   19  /cassandra/bin/cqlsh
+   20  pyspark --master local
+   21  /spark2.4/bin/pyspark --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5,com.datastax.spark:spark-cassandra-connector_2.11:2.4.2 --driver-memory 512m --driver-cores 1 --master local[1]
+   22  /usr/hdp/3.1.4.0-315/kafka/bin/kafka-topics.sh --create --topic tickers_json --zookeeper bigdataanalytics-worker-0.novalocal:2181 --partitions 1 --replication-factor 2 --config retention.ms=-1
+   23  kafka/bin/kafka-console-consumer.sh --create --topic tickers_json --zookeeper bigdataanalytics-worker-0.novalocal:2181 --partitions 1 --replication-factor 2 --config retention.ms=-1
+   24  /kafka/bin/kafka-console-consumer.sh --create --topic tickers_json --zookeeper bigdataanalytics-worker-0.novalocal:2181 --partitions 1 --replication-factor 2 --config retention.ms=-1
+   25  /kafka/bin/kafka-topics.sh --create --topic tickers_json --zookeeper bigdataanalytics-worker-0.novalocal:2181 --partitions 1 --replication-factor 2 --config retention.ms=-1
+   26  /kafka/bin/kafka-topics.sh --create --topic tickers_json --zookeeper bigdataanalytics-worker-0.novalocal:2181 --partitions 1 --replication-factor 2 --config retention.ms=-1 --from-beginning --bootstrap-server  10.0.0.6:2181
+   27  /kafka/bin/kafka-topics.sh --create --topic tickers_json --zookeeper 10.0.0.6:6667 --partitions 1 --replication-factor 2 --config retention.ms=-1
+   28  =
+   29  /usr/hdp/3.1.4.0-315/kafka/bin/kafka-console-producer.sh --topic tickers_json --broker-list 10.0.0.6:6667
+   30  /kafka/bin/kafka-console-consumer.sh --topic test_topic --from-beginning --bootstrap-server 10.0.0.6:6667
+   31  ll
+   32  mkdir input_json
+   33  ll
+   34  mv *.json /input_json
+   35  mv *.json input_json
+   36  ll
+   37  cd input_json
+   38  ll
+   39  cd ..
+   40  mkdir spark_submit
+   41  hdfs dfs -ls
+   42  cd spark_submit
+   43  /spark2.4/bin/spark-submit --driver-memory 512m --driver-cores 1 --master local[1] 7.spark-submit-batch.py
+   44  hdfs dfs -ls
+   45  hdfs dfs put input_json .
+   46  hdfs dfs -put input_json .
+   47  cd
+   48  hdfs dfs -put input_json .
+   49  hdfs dfs -ls
+   50  cd spark_submit
+   51  /spark2.4/bin/spark-submit --driver-memory 512m --driver-cores 1 --master local[1] 7.spark-submit-batch.py
+   52  hdfs dfs -ls
+   53  hdfs dfs -cd my_submit_parquet_files
+   54  hdfs dfs -ls my_submit_parquet_files
+   55  ll
+   56  /spark2.4/bin/spark-submit --driver-memory 512m --driver-cores 1 --master local[1] 7.1_spark-submit_stream.py
+   57  hdfs dfs -ls my_submit_parquet_files
+   58  /spark2.4/bin/spark-submit --driver-memory 512m --driver-cores 1 --master local[1] 7.2_spark-submit_stable.py
+   59  hdfs dfs -ls my_submit_parquet_files
+   60  export SPARK_KAFKA_VERSION=0.10
+   61  /spark2.4/bin/pyspark --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5,com.datastax.spark:spark-cassandra-connector_2.11:2.4.2 --driver-memory 512m --driver-cores 1 --master local[1]
+   62  hdfs dfs -ls
+   63  hdfs dfs -pwd
+   64  pwd
+   65  hdfs dfs -mkdir 000
+   66  hdfs dfs -rm -r 000
+   67  hdfs dfs -put titanic.csv titanic/
+   68  hdfs dfs -mkdir titanic
+   69  hdfs dfs -put titanic.csv titanic/
+   70  hdfs dfs -put titanic_test.csv titanic/
+   71  hdfs dfs -ls titanic/
+   72  export SPARK_KAFKA_VERSION=0.10
+   73  /spark2.4/bin/pyspark --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5,com.datastax.spark:spark-cassandra-connector_2.11:2.4.2 --driver-memory 512m --driver-cores 1 --master local[1]
+   74  hdfs dfs -put *.csv titanic
+   75  hdfs dfs -rm titanic/*.csv
+   76  hdfs dfs -put *.csv titanic
+   77  export SPARK_KAFKA_VERSION=0.10
+   78  /spark2.4/bin/pyspark --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5,com.datastax.spark:spark-cassandra-connector_2.11:2.4.2 --driver-memory 512m --driver-cores 1 --master local[1]
+   79  export SPARK_KAFKA_VERSION=0.10
+   80  /spark2.4/bin/pyspark --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5,com.datastax.spark:spark-cassandra-connector_2.11:2.4.2 --driver-memory 512m --driver-cores 1 --master local[1]
+   81  дд
+   82  ll
+   83  rm *.csv
+   84  ll
+   85  git --version
+   86  ll
+   87  nano data.csv
+   88  hdfs dfs -mkdir titanic
+   89  hdfs dfs -put *.csv titanic
+   90  hdfs dfs -ls titanic
+   91  nano titanic_train.csv
+   92  /kafka/bin/kafka-console-consumer.sh --topic tickers_json --bootstrap-server 10.0.0.6:6667
+   93  hdfs dfs -ls
+   94  /kafka/bin/kafka-topics.sh --create --topic titanic --zookeeper 10.0.0.6:2181 --partitions 1 --replication-factor 2 --config retention.ms=-1
+   95  /kafka/bin/kafka-console-producer.sh --topic titanic --broker-list 10.0.0.6:6660
+   96  /kafka/bin/kafka-console-producer.sh --topic titanic --broker-list 10.0.0.6:6667
+   97  /kafka/bin/kafka-console-consumer.sh --topic titanic --bootstrap-server 10.0.0.6:6667
+   98  /kafka/bin/kafka-topics.sh --create --topic tickers_json --zookeeper 10.0.0.6:2181 --partitions 1 --replication-factor 2 --config retention.ms=-1
+   99  /kafka/bin/kafka-console-producer.sh --topic tickers_json --broker-list 10.0.0.6:6667
+  100  ll
+  101  hdfs dfs -ls
+  102  hdfs dfs -rm -r titanic
+  103  hdfs dfs -ls
+  104  hdfs dfs -mkdir data
+  105  hdfs dfs -put *.csv data
+  106  hdfs dfs -ls data
+  107  export SPARK_KAFKA_VERSION=0.10
+  108  /spark2.4/bin/pyspark --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5,com.datastax.spark:spark-cassandra-connector_2.11:2.4.2 --driver-memory 512m --driver-cores 1 --master local[1]
+  109  /kafka/bin/kafka-console-consumer.sh --topic titanic --bootstrap-server 10.0.0.6:6667
+  110  /kafka/bin/kafka-console-producer.sh --topic titanic --broker-list 10.0.0.6:6667
+  111  export SPARK_KAFKA_VERSION=0.10
+  112  /spark2.4/bin/pyspark --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5,com.datastax.spark:spark-cassandra-connector_2.11:2.4.2 --driver-memory 512m --driver-cores 1 --master local[1]
