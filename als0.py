@@ -1,6 +1,6 @@
-#import findspark
-#findspark.init()
-#import pandas as pd
+import findspark
+findspark.init()
+import pandas as pd
 from pyspark.sql.functions import col, explode
 from pyspark import SparkContext
 
@@ -23,11 +23,9 @@ sc = SparkContext
 spark = SparkSession.builder.appName('Recommendations').getOrCreate()
 spark.sparkContext.setLogLevel("ERROR")
 
-data = spark.read.csv("hdfs://bigdataanalytics2-head-shdpt-v31-1-0.novalocal:8020/user/305_kozik/data/transaction_data.csv", header=True)
+data = spark.read.csv("/home/ksn38/data/transaction_data.csv", header=True)
 data = data.toDF(*[col.lower() for col in data.columns])
 data = data.withColumnRenamed('product_id','item_id').withColumnRenamed('household_key','user_id')
-
-from pyspark.sql.functions import col, trim, lower
 
 data = data.\
     withColumn('user_id', col('user_id').cast('integer')).\
@@ -93,6 +91,9 @@ print("  RegParam:", model._java_obj.parent().getRegParam())
 test_predictions = model.transform(test)
 RMSE = evaluator.evaluate(test_predictions)
 print(RMSE)
+
+nrecommendations = model.recommendForAllUsers(10)
+nrecommendations.limit(10).show()
 
 nrecommendations = nrecommendations\
     .withColumn("rec_exp", explode("recommendations"))\
