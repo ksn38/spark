@@ -94,6 +94,9 @@ test_predictions = model.transform(test)
 RMSE = evaluator.evaluate(test_predictions)
 print(RMSE)
 
+nrecommendations = model.recommendForAllUsers(10)
+nrecommendations.limit(10).show()
+
 nrecommendations = nrecommendations\
     .withColumn("rec_exp", explode("recommendations"))\
     .select('user_id', col("rec_exp.item_id"), col("rec_exp.rating"))
