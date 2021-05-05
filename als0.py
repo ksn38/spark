@@ -65,7 +65,7 @@ print("The data dataframe is ", "%.2f" % sparsity + "% empty.")
 (train, test) = data.randomSplit([0.8, 0.2], seed = 1234)
 
 # Create ALS model
-als = ALS(userCol="user_id", itemCol="item_id", ratingCol="quantity", nonnegative = True, implicitPrefs = False, coldStartStrategy="drop")
+als = ALS(userCol="user_id", itemCol="item_id", ratingCol="quantity", nonnegative = True, implicitPrefs = True, coldStartStrategy="drop")
 
 t1 = time.time()
 
