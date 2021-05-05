@@ -49,13 +49,13 @@ data = data.withColumn('quantity', F.when(F.col("quantity") != 1, 1).otherwise(F
 numerator = data.select("quantity").count()
 print('numerator', numerator)
 
-# Count the number of distinct userIds and distinct movieIds
+# Count the number of distinct userIds and distinct itemIds
 num_users = data.select("user_id").distinct().count()
 num_items = data.select("item_id").distinct().count()
 print('num_users', num_users)
 print('num_items', num_items)
 
-# Set the denominator equal to the number of users multiplied by the number of movies
+# Set the denominator equal to the number of users multiplied by the number of items
 denominator = num_users * num_items
 print('denominator', denominator)
 
