@@ -1,20 +1,11 @@
 import findspark
 findspark.init()
-import pandas as pd
 from pyspark.sql.functions import col, explode
 from pyspark import SparkContext
-
 from pyspark.sql import SparkSession
-
-# Import the required functions
-from pyspark.ml.evaluation import RegressionEvaluator
 from pyspark.ml.recommendation import ALS
-from pyspark.ml.tuning import ParamGridBuilder, CrossValidator
-
 from pyspark.ml.evaluation import RegressionEvaluator
-from pyspark.ml.tuning import ParamGridBuilder, CrossValidator
 from pyspark.sql import functions as F
-
 import time
 
 

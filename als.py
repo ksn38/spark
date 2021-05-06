@@ -1,20 +1,8 @@
-#import findspark
-#findspark.init()
-#import pandas as pd
-from pyspark.sql.functions import col, explode
 from pyspark import SparkContext
-
 from pyspark.sql import SparkSession
-
-# Import the required functions
-from pyspark.ml.evaluation import RegressionEvaluator
 from pyspark.ml.recommendation import ALS
-from pyspark.ml.tuning import ParamGridBuilder, CrossValidator
-
 from pyspark.ml.evaluation import RegressionEvaluator
-from pyspark.ml.tuning import ParamGridBuilder, CrossValidator
 from pyspark.sql import functions as F
-
 import time
 
 
@@ -27,7 +15,7 @@ data = spark.read.csv("hdfs://bigdataanalytics2-head-shdpt-v31-1-0.novalocal:802
 data = data.toDF(*[col.lower() for col in data.columns])
 data = data.withColumnRenamed('product_id','item_id').withColumnRenamed('household_key','user_id')
 
-from pyspark.sql.functions import col, trim, lower
+from pyspark.sql.functions import col, lower, explode
 
 data = data.\
     withColumn('user_id', col('user_id').cast('integer')).\
