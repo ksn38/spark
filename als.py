@@ -64,7 +64,8 @@ sparsity = (1.0 - (numerator *1.0)/denominator)*100
 print("The data dataframe is ", "%.2f" % sparsity + "% empty.")
 
 # Create test and train set
-(train, test) = data.randomSplit([0.8, 0.2], seed = 1234)
+train = data.select('*').where(col('week_no') < 95)
+test = data.select('*').where(col('week_no') >= 95)
 
 # Create ALS model
 als = ALS(userCol="user_id", itemCol="item_id", ratingCol="quantity", nonnegative = True, implicitPrefs = True, coldStartStrategy="drop")
