@@ -56,6 +56,8 @@ test_predictions = model.transform(test)
 RMSE = evaluator.evaluate(test_predictions)
 print(RMSE)
 
+model.save(path='models/als')
+
 '''nrecommendations = model.recommendForAllUsers(10)
 nrecommendations.limit(10).show()
 
