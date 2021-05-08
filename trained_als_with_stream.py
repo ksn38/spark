@@ -18,12 +18,12 @@ from pyspark.ml.classification import LogisticRegression
 from pyspark.ml.feature import OneHotEncoderEstimator, VectorAssembler, CountVectorizer, StringIndexer, IndexToString
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 
-spark = SparkSession.builder.appName("gogin_spark").getOrCreate()
+spark = SparkSession.builder.appName("ksn38_spark").getOrCreate()
 
 kafka_brokers = "10.0.0.6:6667"
 
 #читаем кафку по одной записи, но можем и по 1000 за раз
-passengers = spark.readStream. \
+als_data = spark.readStream. \
     format("kafka"). \
     option("kafka.bootstrap.servers", kafka_brokers). \
     option("subscribe", "titanic"). \
@@ -31,15 +31,14 @@ passengers = spark.readStream. \
     option("maxOffsetsPerTrigger", "1"). \
     load()
 
-schema = StructType() \
-    .add("Pclass", IntegerType()) \
-    .add("Sex", IntegerType()) \
-    .add("Age", FloatType()) \
-    .add("Embarked", FloatType())
+schema = StructType(). \
+    add('user_id', IntegerType()).\
+    add('item_id', IntegerType().\
+    add('quantity', IntegerType())
 
-value_passengers = passengers.select(F.from_json(F.col("value").cast("String"), schema).alias("value"), "offset")
+value_als = als_data.select(F.from_json(F.col("value").cast("String"), schema).alias("value"), "offset")
 
-passengers_flat = value_passengers.select(F.col("value.*"), "offset")
+als_flat = value_als.select(F.col("value.*"), "offset")
 
 def console_output(df, freq):
     return df.writeStream \
@@ -53,7 +52,7 @@ s.stop()
 
 ###############
 #подгружаем ML из HDFS
-pipeline_model = PipelineModel.load("my_lr_model")
+pipeline_model = PipelineModel.load("/home/ksn38/models/als")
 
 ##########
 #вся логика в этом foreachBatch
@@ -69,7 +68,7 @@ def writer_logic(df, epoch_id):
     df.unpersist()
 
 #связываем источник Кафки и foreachBatch функцию
-stream = passengers_flat \
+stream = als_flat \
     .writeStream \
     .trigger(processingTime='20 seconds') \
     .foreachBatch(writer_logic) \

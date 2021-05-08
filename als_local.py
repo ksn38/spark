@@ -20,17 +20,8 @@ data = data.withColumnRenamed('product_id','item_id').withColumnRenamed('househo
 
 data = data.\
     withColumn('user_id', col('user_id').cast('integer')).\
-    withColumn('basket_id', col('basket_id').cast('integer')).\
-    withColumn('day', col('day').cast('integer')).\
     withColumn('item_id', col('item_id').cast('integer')).\
-    withColumn('quantity', col('quantity').cast('integer')).\
-    withColumn('sales_value', col('sales_value').cast('float')).\
-    withColumn('store_id', col('store_id').cast('integer')).\
-    withColumn('retail_disc', col('retail_disc').cast('float')).\
-    withColumn('week_no', col('week_no').cast('integer')).\
-    withColumn('coupon_disc', col('coupon_disc').cast('integer')).\
-    withColumn('coupon_match_disc', col('coupon_match_disc').cast('float')).\
-    drop('trans_time')
+    withColumn('quantity', col('quantity').cast('integer'))
     
 data = data.withColumn('quantity', F.when(F.col("quantity") != 1, 1).otherwise(F.col("quantity")))
 
