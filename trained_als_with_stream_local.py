@@ -5,7 +5,7 @@
 #/home/kafka/kafka/bin/kafka-console-consumer.sh --topic als_kafka2 --bootstrap-server localhost:9092
 
 #export SPARK_KAFKA_VERSION=0.10
-#opt/spark/bin/pyspark --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5,com.datastax.spark:spark-cassandra-connector_2.11:2.4.2 --driver-memory 1024m --driver-cores 1 --master local[1]
+#/opt/spark/bin/pyspark --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5,com.datastax.spark:spark-cassandra-connector_2.11:2.4.2 --driver-memory 1024m --driver-cores 1 --master local[1]
 
 
 from pyspark.sql import SparkSession, DataFrame
@@ -27,9 +27,7 @@ als_data = spark.readStream. \
     load()
 
 schema = StructType().\
-    add('user_id', IntegerType()).\
-    add('item_id', IntegerType()).\
-    add('quantity', IntegerType())
+    add('user_id', IntegerType())
 
 value_als = als_data.select(F.from_json(F.col("value").cast("String"), schema).alias("value"), "offset")
 
@@ -57,8 +55,11 @@ def writer_logic(df, epoch_id):
     print("---------I've got new batch--------")
     print("This is what I've got from Kafka:")
     df.show()
-    predict = als_loaded.transform(df)
+    predict = als_loaded.recommendForUserSubset(df, 5)
     print("Here is what I've got after model transformation:")
+    #predict = predict\
+    #    .withColumn("rec_exp", explode("recommendations"))\
+    #    .select('user_id', col("rec_exp.item_id"), col("rec_exp.rating"))
     predict.show()
     #обновляем исторический агрегат в касандре
     df.unpersist()
@@ -66,10 +67,13 @@ def writer_logic(df, epoch_id):
 #связываем источник Кафки и foreachBatch функцию
 stream = als_flat \
     .writeStream \
-    .trigger(processingTime='20 seconds') \
+    .trigger(processingTime='5 seconds') \
     .foreachBatch(writer_logic) \
-    .option("checkpointLocation", "checkpoints/sales_unknown_checkpoint")
+    .option("checkpointLocation", "checkpoints/sales_unknown_checkpoint") \
+    #.option("failOnDataLoss", "false")
 
 #поехали
 s = stream.start()
 s.stop()
+
+
