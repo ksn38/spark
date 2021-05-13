@@ -33,7 +33,7 @@ value_als = als_data.select(F.from_json(F.col("value").cast("String"), schema).a
 
 als_flat = value_als.select(F.col("value.*"), "offset")
 
-def console_output(df, freq):
+'''def console_output(df, freq):
     return df.writeStream \
         .format("console") \
         .trigger(processingTime='%s seconds' % freq ) \
@@ -41,11 +41,10 @@ def console_output(df, freq):
         .start()
 
 s = console_output(als_flat, 3)
-s.stop()
+s.stop()'''
 
 ###############
-#подгружаем ML из HDFS
-#pipeline_model = PipelineModel.load("/home/ksn38/models/als")
+#подгружаем als
 als_loaded = ALSModel.load("/home/ksn38/models/als")
 
 ##########
@@ -57,9 +56,9 @@ def writer_logic(df, epoch_id):
     df.show()
     predict = als_loaded.recommendForUserSubset(df, 5)
     print("Here is what I've got after model transformation:")
-    #predict = predict\
-    #    .withColumn("rec_exp", explode("recommendations"))\
-    #    .select('user_id', col("rec_exp.item_id"), col("rec_exp.rating"))
+    predict = predict\
+        .withColumn("rec_exp", F.explode("recommendations"))\
+        .select('user_id', F.col("rec_exp.item_id"), F.col("rec_exp.rating"))
     predict.show()
     #обновляем исторический агрегат в касандре
     df.unpersist()
@@ -69,8 +68,7 @@ stream = als_flat \
     .writeStream \
     .trigger(processingTime='5 seconds') \
     .foreachBatch(writer_logic) \
-    .option("checkpointLocation", "checkpoints/sales_unknown_checkpoint") \
-    #.option("failOnDataLoss", "false")
+    #.option("checkpointLocation", "checkpoints/sales_unknown_checkpoint") \
 
 #поехали
 s = stream.start()
