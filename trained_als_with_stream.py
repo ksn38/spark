@@ -8,13 +8,9 @@
 #/spark2.4/bin/pyspark --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5,com.datastax.spark:spark-cassandra-connector_2.11:2.4.2 --driver-memory 512m --driver-cores 1 --master local[1]
 
 
-#from pyspark.ml import Pipeline, PipelineModel
 from pyspark.sql import SparkSession, DataFrame
 from pyspark.sql.types import StructType, StringType, IntegerType, TimestampType, FloatType
 from pyspark.sql import functions as F
-#from pyspark.ml.classification import LogisticRegression
-#from pyspark.ml.feature import OneHotEncoderEstimator, VectorAssembler, CountVectorizer, StringIndexer, IndexToString
-#from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 from pyspark.ml.recommendation import ALSModel
 
 spark = SparkSession.builder.appName("ksn38_spark").getOrCreate()
@@ -31,15 +27,13 @@ als_data = spark.readStream. \
     load()
 
 schema = StructType().\
-    add('user_id', IntegerType()).\
-    add('item_id', IntegerType()).\
-    add('quantity', IntegerType())
+    add('user_id', IntegerType())
 
 value_als = als_data.select(F.from_json(F.col("value").cast("String"), schema).alias("value"), "offset")
 
 als_flat = value_als.select(F.col("value.*"), "offset")
 
-def console_output(df, freq):
+'''def console_output(df, freq):
     return df.writeStream \
         .format("console") \
         .trigger(processingTime='%s seconds' % freq ) \
@@ -47,11 +41,10 @@ def console_output(df, freq):
         .start()
 
 s = console_output(als_flat, 3)
-s.stop()
+s.stop()'''
 
 ###############
 #подгружаем ML из HDFS
-#pipeline_model = PipelineModel.load("/home/ksn38/models/als")
 als_loaded = ALSModel.load("hdfs://bigdataanalytics2-head-shdpt-v31-1-0.novalocal:8020/user/305_kozik/models/als_loc")
 
 ##########
@@ -61,8 +54,11 @@ def writer_logic(df, epoch_id):
     print("---------I've got new batch--------")
     print("This is what I've got from Kafka:")
     df.show()
-    predict = als_loaded.transform(df)
+    predict = als_loaded.recommendForUserSubset(df, 5)
     print("Here is what I've got after model transformation:")
+    predict = predict\
+        .withColumn("rec_exp", F.explode("recommendations"))\
+        .select('user_id', F.col("rec_exp.item_id"), F.col("rec_exp.rating"))
     predict.show()
     #обновляем исторический агрегат в касандре
     df.unpersist()
@@ -70,10 +66,12 @@ def writer_logic(df, epoch_id):
 #связываем источник Кафки и foreachBatch функцию
 stream = als_flat \
     .writeStream \
-    .trigger(processingTime='20 seconds') \
+    .trigger(processingTime='5 seconds') \
     .foreachBatch(writer_logic) \
-    .option("checkpointLocation", "checkpoints/sales_unknown_checkpoint")
+    #.option("checkpointLocation", "checkpoints/sales_unknown_checkpoint") \
 
 #поехали
 s = stream.start()
 s.stop()
+
+
