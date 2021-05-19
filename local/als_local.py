@@ -1,5 +1,5 @@
-import findspark
-findspark.init()
+#import findspark
+#findspark.init()
 from pyspark.sql.functions import col, explode
 from pyspark import SparkContext
 from pyspark.sql import SparkSession
