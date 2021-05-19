@@ -50,10 +50,3 @@ print(RMSE)
 
 model.write().overwrite().save(path='/home/ksn38/models/als')
 
-'''nrecommendations = model.recommendForAllUsers(10)
-nrecommendations.limit(10).show()
-
-nrecommendations = nrecommendations\
-    .withColumn("rec_exp", explode("recommendations"))\
-    .select('user_id', col("rec_exp.item_id"), col("rec_exp.rating"))
-nrecommendations.limit(10).show()'''

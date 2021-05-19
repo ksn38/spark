@@ -5,7 +5,7 @@
 #/home/kafka/kafka/bin/kafka-console-consumer.sh --topic als_kafka2 --bootstrap-server localhost:9092
 
 #export SPARK_KAFKA_VERSION=0.10
-#/opt/spark/bin/pyspark --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5,com.datastax.spark:spark-cassandra-connector_2.11:2.4.2 --driver-memory 1024m --driver-cores 1 --master local[1]
+#/opt/spark/bin/pyspark --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5,com.datastax.spark:spark-cassandra-connector_2.11:2.4.2 --driver-memory 1024m --driver-cores 1 --master local[1] trained_als_with_stream_local.py
 
 
 from pyspark.sql import SparkSession, DataFrame
@@ -72,6 +72,6 @@ stream = als_flat \
 
 #поехали
 s = stream.start()
-s.stop()
+#s.stop()
 
 
