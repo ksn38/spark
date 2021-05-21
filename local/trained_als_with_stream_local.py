@@ -7,6 +7,9 @@
 #export SPARK_KAFKA_VERSION=0.10
 #/opt/spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5 trained_als_with_stream_local.py
 
+#{"user_id":1598}
+#{"user_id":2375}
+
 from pyspark.sql import SparkSession, DataFrame
 from pyspark.sql.types import StructType, StringType, IntegerType, TimestampType, FloatType
 from pyspark.sql import functions as F
