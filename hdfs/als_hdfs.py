@@ -48,11 +48,3 @@ RMSE = evaluator.evaluate(test_predictions)
 print(RMSE)
 
 model.write().overwrite().save(path='hdfs://bigdataanalytics2-head-shdpt-v31-1-0.novalocal:8020/user/305_kozik/models/als')
-
-'''nrecommendations = model.recommendForAllUsers(10)
-nrecommendations.limit(10).show()
-
-nrecommendations = nrecommendations\
-    .withColumn("rec_exp", explode("recommendations"))\
-    .select('user_id', col("rec_exp.item_id"), col("rec_exp.rating"))
-nrecommendations.limit(10).show()'''

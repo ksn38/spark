@@ -5,7 +5,10 @@
 #/kafka/bin/kafka-console-consumer.sh --topic als_kafka2 --bootstrap-server 10.0.0.6:6667
 
 #export SPARK_KAFKA_VERSION=0.10
-#/spark2.4/bin/pyspark --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5,com.datastax.spark:spark-cassandra-connector_2.11:2.4.2 --driver-memory 512m --driver-cores 1 --master local[1]
+#/spark2.4/bin/pyspark --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5 --driver-memory 512m --driver-cores 1 --master local[1]
+
+#{"user_id":1598}
+#{"user_id":2375}
 
 
 from pyspark.sql import SparkSession, DataFrame
