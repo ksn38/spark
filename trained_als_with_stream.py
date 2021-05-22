@@ -5,7 +5,8 @@
 #/home/kafka/kafka/bin/kafka-console-consumer.sh --topic als_kafka2 --bootstrap-server localhost:9092
 
 #export SPARK_KAFKA_VERSION=0.10
-#/opt/spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5 trained_als_with_stream_local.py
+#/opt/spark/bin/pyspark --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5
+#/opt/spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5 trained_als_with_stream.py
 
 #{"user_id":1598}
 #{"user_id":2375}
@@ -48,11 +49,9 @@ als_flat = value_als.select(F.col("value.*"), "offset")
 s = console_output(als_flat, 3)
 s.stop()'''
 
-###############
 #load als
 als_loaded = ALSModel.load("/home/ksn38/models/als")
 
-##########
 #all logick in this foreachBatch
 def writer_logic(df, epoch_id):
     df.persist()
@@ -75,6 +74,7 @@ stream = als_flat \
     #.option("checkpointLocation", "checkpoints/sales_unknown_checkpoint") \
 
 s = stream.start()
+s.awaitTermination()
 #s.stop()
 print('############################################')
 
