@@ -1,6 +1,9 @@
 #/home/kafka/kafka/bin/kafka-topics.sh --create --topic als_kafka2 --zookeeper localhost:2181 --partitions 1 --replication-factor 1 --config retention.ms=-1
 #/home/kafka/kafka/bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic als_kafka2
 
+#kafka-configs.sh --zookeeper localhost:2181 --alter --entity-type topics --add-config retention.ms=1000 --entity-name text_topic
+#kafka-configs.sh --zookeeper localhost:2181 --entity-type topics --describe --entity-name text_topic
+
 #/home/kafka/kafka/bin/kafka-console-producer.sh --topic als_kafka2 --broker-list localhost:9092
 #/home/kafka/kafka/bin/kafka-console-consumer.sh --topic als_kafka2 --bootstrap-server localhost:9092
 
@@ -10,6 +13,7 @@
 
 #{"user_id":1598}
 #{"user_id":2375}
+#{"user_id":3000}
 
 
 from pyspark.sql import SparkSession, DataFrame

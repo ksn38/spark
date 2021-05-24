@@ -1,3 +1,6 @@
+#python3 fit_als.py
+
+
 import findspark
 findspark.init()
 from pyspark.sql.functions import col, explode
