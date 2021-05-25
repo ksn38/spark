@@ -53,6 +53,20 @@ als_flat = value_als.select(F.col("value.*"), "offset")
 s = console_output(als_flat, 3)
 s.stop()'''
 
+#load top5
+data = spark.read.csv("/tmp/orders.csv", header=True)
+data = data.withColumnRenamed('product_id','item_id').withColumnRenamed('household_key','user_id')
+
+data = data.\
+    withColumn('user_id', col('user_id').cast('integer')).\
+    withColumn('item_id', col('item_id').cast('integer')).\
+    withColumn('quantity', col('quantity').cast('integer'))
+    
+data = data.withColumn('quantity', F.when(F.col("quantity") != 1, 1).otherwise(F.col("quantity")))
+
+top5 = data.groupBy('item_id').agg(F.count('item_id').alias('rating'))\
+.orderBy('rating', ascending=False).take(5)
+
 #load als
 als_loaded = ALSModel.load("/home/ksn38/models/als")
 
@@ -63,11 +77,17 @@ def writer_logic(df, epoch_id):
     print("This is what I've got from Kafka:")
     df.show()
     predict = als_loaded.recommendForUserSubset(df, 5)
+    #print(predict.select("recommendations").show())
+    print(predict.select("recommendations").count())
     print("Here is what I've got after model transformation:")
-    predict = predict\
-        .withColumn("rec_exp", F.explode("recommendations"))\
-        .select('user_id', F.col("rec_exp.item_id"), F.col("rec_exp.rating"))
-    predict.show()
+    if predict.select("recommendations").count() == 1:
+        predict = predict\
+            .withColumn("rec_exp", F.explode("recommendations"))\
+            .select('user_id', F.col("rec_exp.item_id"), F.col("rec_exp.rating"))
+        predict.show()
+    else:
+        #print([[i.item_id, i.rating]for i in top5])
+        print(top5)
     df.unpersist()
 
 #bind source of kafka with foreachBatch in function
@@ -80,6 +100,6 @@ stream = als_flat \
 s = stream.start()
 s.awaitTermination()
 #s.stop()
-print('############################################')
+
 
 
