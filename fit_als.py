@@ -1,6 +1,3 @@
-#python3 fit_als.py
-
-
 import findspark
 findspark.init()
 from pyspark.sql.functions import col, explode
@@ -35,11 +32,6 @@ t1 = time.time()
 evaluator = RegressionEvaluator(metricName="rmse", labelCol="quantity", predictionCol="prediction") 
 
 model = als.fit(data)
-
-print('time', time.time() - t1)
-print("Rank:", model._java_obj.parent().getRank())
-print("MaxIter:", model._java_obj.parent().getMaxIter())
-print("RegParam:", model._java_obj.parent().getRegParam())
 
 # View the predictions
 predictions = model.transform(data)

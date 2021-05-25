@@ -10,6 +10,7 @@
 
 #{"user_id":1598}
 #{"user_id":2375}
+#{"user_id":3000}
 
 
 from pyspark.sql import SparkSession, DataFrame
@@ -23,12 +24,12 @@ spark.sparkContext.setLogLevel("ERROR")
 kafka_brokers = "10.0.0.6:6667"
 
 #read kafka by 1 record
-als_data = spark.readStream. \
-    format("kafka"). \
-    option("kafka.bootstrap.servers", kafka_brokers). \
-    option("subscribe", "als_kafka2"). \
-    option("startingOffsets", "earliest"). \
-    option("maxOffsetsPerTrigger", "1"). \
+als_data = spark.readStream.\
+    format("kafka").\
+    option("kafka.bootstrap.servers", kafka_brokers).\
+    option("subscribe", "als_kafka2").\
+    option("startingOffsets", "earliest").\
+    option("maxOffsetsPerTrigger", "1").\
     load()
 
 schema = StructType().\
@@ -48,6 +49,20 @@ als_flat = value_als.select(F.col("value.*"), "offset")
 s = console_output(als_flat, 3)
 s.stop()'''
 
+#get top5
+data = spark.read.csv("hdfs://bigdataanalytics2-head-shdpt-v31-1-0.novalocal:8020/user/305_kozik/data/transaction_data.csv", header=True)
+data = data.withColumnRenamed('product_id','item_id').withColumnRenamed('household_key','user_id')
+
+data = data.\
+    withColumn('user_id', F.col('user_id').cast('integer')).\
+    withColumn('item_id', F.col('item_id').cast('integer')).\
+    withColumn('quantity', F.col('quantity').cast('integer'))
+    
+data = data.withColumn('quantity', F.when(F.col("quantity") != 1, 1).otherwise(F.col("quantity")))
+
+top5 = data.groupBy('item_id').agg(F.count('item_id').alias('rating'))\
+.orderBy('rating', ascending=False).take(5)
+
 #load als
 als_loaded = ALSModel.load("hdfs://bigdataanalytics2-head-shdpt-v31-1-0.novalocal:8020/user/305_kozik/models/als_loc")
 
@@ -58,11 +73,17 @@ def writer_logic(df, epoch_id):
     print("This is what I've got from Kafka:")
     df.show()
     predict = als_loaded.recommendForUserSubset(df, 5)
+    #print(predict.select("recommendations").show())
+    print(predict.select("recommendations").count())
     print("Here is what I've got after model transformation:")
-    predict = predict\
-        .withColumn("rec_exp", F.explode("recommendations"))\
-        .select('user_id', F.col("rec_exp.item_id"), F.col("rec_exp.rating"))
-    predict.show()
+    if predict.select("recommendations").count() == 1:
+        predict = predict\
+            .withColumn("rec_exp", F.explode("recommendations"))\
+            .select('user_id', F.col("rec_exp.item_id"), F.col("rec_exp.rating"))
+        predict.show()
+    else:
+        #print([[i.item_id, i.rating]for i in top5])
+        print(top5)
     df.unpersist()
 
 #bind source of kafka with foreachBatch in function
@@ -75,5 +96,4 @@ stream = als_flat \
 s = stream.start()
 s.awaitTermination()
 #s.stop()
-print('############################################')
 

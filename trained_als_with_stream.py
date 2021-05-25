@@ -28,12 +28,12 @@ spark.sparkContext.setLogLevel("ERROR")
 kafka_brokers = "localhost:9092"
 
 #read kafka by 1 record
-als_data = spark.readStream. \
-    format("kafka"). \
-    option("kafka.bootstrap.servers", kafka_brokers). \
-    option("subscribe", "als_kafka2"). \
-    option("startingOffsets", "earliest"). \
-    option("maxOffsetsPerTrigger", "1"). \
+als_data = spark.readStream.\
+    format("kafka").\
+    option("kafka.bootstrap.servers", kafka_brokers).\
+    option("subscribe", "als_kafka2").\
+    option("startingOffsets", "earliest").\
+    option("maxOffsetsPerTrigger", "1").\
     load()
 
 schema = StructType().\
@@ -53,14 +53,14 @@ als_flat = value_als.select(F.col("value.*"), "offset")
 s = console_output(als_flat, 3)
 s.stop()'''
 
-#load top5
+#get top5
 data = spark.read.csv("/tmp/orders.csv", header=True)
 data = data.withColumnRenamed('product_id','item_id').withColumnRenamed('household_key','user_id')
 
 data = data.\
-    withColumn('user_id', col('user_id').cast('integer')).\
-    withColumn('item_id', col('item_id').cast('integer')).\
-    withColumn('quantity', col('quantity').cast('integer'))
+    withColumn('user_id', F.col('user_id').cast('integer')).\
+    withColumn('item_id', F.col('item_id').cast('integer')).\
+    withColumn('quantity', F.col('quantity').cast('integer'))
     
 data = data.withColumn('quantity', F.when(F.col("quantity") != 1, 1).otherwise(F.col("quantity")))
 

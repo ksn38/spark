@@ -25,8 +25,4 @@ begin
 end;
 $$ language plpgsql;
 
-copy (select household_key, product_id, quantity, week_no from orders) to '/tmp/orders.csv' with csv delimiter ',' header;
 
-\copy (select household_key, product_id, quantity, week_no from orders) to '/tmp/orders.csv' with csv header
-
--- psql -U ksn38 -d sparkdb -a -f orders.sql

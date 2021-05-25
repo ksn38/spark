@@ -37,11 +37,6 @@ evaluator = RegressionEvaluator(metricName="rmse", labelCol="quantity", predicti
 
 model = als.fit(train)
 
-print('time', time.time() - t1)
-print("Rank:", model._java_obj.parent().getRank())
-print("MaxIter:", model._java_obj.parent().getMaxIter())
-print("RegParam:", model._java_obj.parent().getRegParam())
-
 # View the predictions
 test_predictions = model.transform(test)
 RMSE = evaluator.evaluate(test_predictions)
