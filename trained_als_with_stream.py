@@ -65,7 +65,7 @@ data = data.\
 data = data.withColumn('quantity', F.when(F.col("quantity") != 1, 1).otherwise(F.col("quantity")))
 
 top5 = data.groupBy('item_id').agg(F.count('item_id').alias('rating'))\
-.orderBy('rating', ascending=False).take(5)
+    .orderBy('rating', ascending=False).take(5)
 
 #load als
 als_loaded = ALSModel.load("/home/ksn38/models/als")
@@ -77,7 +77,6 @@ def writer_logic(df, epoch_id):
     print("This is what I've got from Kafka:")
     df.show()
     predict = als_loaded.recommendForUserSubset(df, 5)
-    #print(predict.select("recommendations").show())
     print(predict.select("recommendations").count())
     print("Here is what I've got after model transformation:")
     if predict.select("recommendations").count() == 1:
@@ -86,7 +85,6 @@ def writer_logic(df, epoch_id):
             .select('user_id', F.col("rec_exp.item_id"), F.col("rec_exp.rating"))
         predict.show()
     else:
-        #print([[i.item_id, i.rating]for i in top5])
         print(top5)
     df.unpersist()
 
