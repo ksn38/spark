@@ -4,7 +4,7 @@
 На них обучается ALS также используется для получения 5 наиболее популярных товаров, которые заменяют рекомендуемые товары в случае, если пользователь ничего не покупал или заходит без авторизации.  
 ID пользоваетля передается через кафку в формате JSON. Время хранения сообщения сокращено до 10 секунд.  
 В конечном итоге все собирается в Spark Streaming и выводится в консоль.  
-Команда для запуска системы psql -U ksn38 -d sparkdb -a -f orders.sql && python3 fit_als.py && /opt/spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5 trained_als_with_stream.py  
+Команда для запуска системы: psql -U ksn38 -d sparkdb -a -f orders.sql && python3 fit_als.py && /opt/spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5 trained_als_with_stream.py  
 
 Блок-схема.
 ![spark-als](https://github.com/ksn38/spark/blob/main/spark-als.png)
